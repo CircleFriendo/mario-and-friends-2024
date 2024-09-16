@@ -1,0 +1,85 @@
+# Hack specific ignores
+# Ignore callisto genereated folder
+.callisto
+
+# Ignore build folder
+build/
+
+# Ignore ROMs and various ROM build results
+*.smc
+*.sfc
+*.smc~
+*.bak
+*.msc
+*.dsc
+
+# Ignore all.map16 file since we're using a text-based map16 format
+resources/all.map16
+
+# Ignore .srm since there's no reason to version control these
+*.srm
+
+# Ignore .zst savestate files ...
+*.zst
+# ... except the ones in resources!
+!resources/*.zst
+
+# Ignore automatically generated flips config file that seems useless
+flipscfg.bin
+
+# Ignore .spc files
+*.spc
+
+# gps ignores
+tools/gps/shared.asm
+tools/gps/block_boilerplate.asm
+tools/gps/__banks.bin
+tools/gps/__pointers_1.bin
+tools/gps/__acts_likes_1.bin
+tools/gps/__temp_settings.bin
+
+# pixi ignores
+tools/pixi/asm/config.asm
+tools/pixi/asm/_versionflag.bin
+tools/pixi/asm/_DefaultTables.bin
+tools/pixi/asm/_CustomStatusPtr.bin
+tools/pixi/asm/_ClusterPtr.bin
+tools/pixi/asm/_ExtendedPtr.bin
+tools/pixi/asm/_ExtendedCapePtr.bin
+tools/pixi/asm/_CustomSize.bin
+
+spr_temp.asm
+*.extmod
+*.mw2
+*.mwt
+*.s16
+*.ssc
+
+# Various addmusick ignores
+tools/addmusick/stats/*
+tools/addmusick/bin/*
+tools/addmusick/asm/SNES/bin/*
+tools/addmusick/asm/SNES/SongSampleList.asm
+tools/addmusick/asm/SFX1DF9Table.bin
+tools/addmusick/asm/SFX1DFCTable.bin
+tools/addmusick/asm/SFXData.bin
+tools/addmusick/asm/tempmain.asm
+tools/addmusick/asm/SNES/temppatch.asm
+tools/addmusick/temp.asm
+tools/addmusick/temp.bin
+tools/addmusick/temp.txt
+tools/addmusick/temp.log
+tools/addmusick/asm/main.bin
+
+# UberASM ignores
+tools/uberasm_tool/asm/work/*
+tools/uberasm_tool/**/__temp.asm
+
+# Ignore Lunar Magic restore folder
+/sysLMRestore
+
+# Ignore conflicts file
+conflicts.txt
+
+# Ignore dependencies files
+**/.dependencies
