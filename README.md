@@ -11,7 +11,7 @@ Wario is heavy and can dash.
 Waluigi has short floaty jumps and a boost jump.
 
 # Set-Up
-Download the zip archive of this repository from either the Releases on the right or the Code -> Download ZIP above. Extract it.
+Click the green Code button above and select Open with Github Desktop. Install Github Desktop if needed.
 
 Supply a clean rom and tell Callisto how to find it using these instructions: https://github.com/Underrout/callisto/wiki/Callisto-Setup-(new-project)
 
