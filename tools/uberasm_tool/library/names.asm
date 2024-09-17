@@ -4,7 +4,7 @@ incsrc "../../../shared/freeram.asm"
 
 mario:
     LDX #$04 ; 5 bytes
-    - LDA MarioName,x
+    - LDA.L MarioName,x
     STA !StatusName,x
     DEX
     BPL -
@@ -12,7 +12,7 @@ mario:
 
 luigi:
     LDX #$04 ; 5 bytes
-    - LDA LuigiName,x
+    - LDA.L LuigiName,x
     STA !StatusName,x
     DEX
     BPL -
@@ -20,7 +20,7 @@ luigi:
 
 daisy:
     LDX #$04 ; 5 bytes
-    - LDA DaisyName,x
+    - LDA.L DaisyName,x
     STA !StatusName,x
     DEX
     BPL -
@@ -28,7 +28,7 @@ daisy:
 
 peach:
     LDX #$04 ; 5 bytes
-    - LDA PeachName,x
+    - LDA.L PeachName,x
     STA !StatusName,x
     DEX
     BPL -
@@ -36,7 +36,7 @@ peach:
 
 wario:
     LDX #$04 ; 5 bytes
-    - LDA WarioName,x
+    - LDA.L WarioName,x
     STA !StatusName,x
     DEX
     BPL -
@@ -44,7 +44,7 @@ wario:
 
 waluigi:
     LDX #$04 ; 5 bytes
-    - LDA WaluigiName,x
+    - LDA.L WaluigiName,x
     STA !StatusName,x
     DEX
     BPL -
