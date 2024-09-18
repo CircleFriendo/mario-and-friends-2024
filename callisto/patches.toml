@@ -84,5 +84,7 @@ patches = [
 
 	"resources/patches/objectool/objectool.asm",
 
+	"resources/patches/FindPlatformSprite.asm",
+
 	"resources/patches/tweaks.asm"
 ]
