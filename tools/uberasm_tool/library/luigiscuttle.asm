@@ -32,7 +32,7 @@ main:
 +:
 	INX #$06
 ++:
-	LDA Table,x
+	LDA.L Table,x
 	STA $13E0|!addr
 	RTL
 
