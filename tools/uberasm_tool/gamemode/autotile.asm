@@ -429,9 +429,6 @@ endmacro
 
 
 init:
-    
-    LDA !enableautotileflag : AND #!enableautotilebit : BEQ ++
-
     REP #$20 : LDA #$C800 : STA $6B : STA $6E : SEP #$20
     
     LDA $70 : STA $0A  ;; set up [$08] for the table at $7FC800
