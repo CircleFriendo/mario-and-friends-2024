@@ -1,5 +1,5 @@
 01 EnemyStackV2.cfg
 
-10 ClassicGoomba.cfg
+10 ClassicGoomba.json
 
 A0 donut_sprite.cfg
