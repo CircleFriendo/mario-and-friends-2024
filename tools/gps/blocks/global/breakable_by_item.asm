@@ -14,6 +14,7 @@ MarioAbove:
 	LDA !GroundPndTimer
 	BNE ShatterIfBig
 
+Turnblock:
 	LDA #$1E
 	STA $1693|!addr
 	LDY #$01
@@ -22,11 +23,12 @@ MarioAbove:
 SpriteV:
 	%check_sprite_kicked_vertical()
 	bcs Shatter
-	rtl
+	bra Turnblock
+	
 SpriteH:
 	%check_sprite_kicked_horizontal()
 	bcs Shatter
-	rtl
+	bra Turnblock
 
 
 MarioBelow:
