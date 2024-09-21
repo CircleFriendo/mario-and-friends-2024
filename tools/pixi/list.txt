@@ -1,5 +1,11 @@
 01 EnemyStackV2.cfg
 
 10 ClassicGoomba.json
+11 bunbun.json
+12 boar.json
+13 moth.json
+14 spooder.json
+15 zinger.json
+
 
 A0 donut_sprite.cfg
