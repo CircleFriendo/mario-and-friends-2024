@@ -18,7 +18,9 @@ active:
   ; check falling
     lda $7d  ; rising
     bmi .end
-    LDA $74  ; climbing
+    LDA $77     	
+    AND #$04
+    ORA $74  ; climbing
     ORA $75			;Swimming?
     ORA $9D  ; lock animation
     ORA $13d4|!addr   ; pause
