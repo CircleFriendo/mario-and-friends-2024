@@ -29,8 +29,8 @@
 ; Counterbreak options reset the corresponding counters/items when the player dies and when going to the Overworld.
 ; Useful for Kaizo and collab hacks.
     !counterbreak_yoshi = 1
-    !counterbreak_powerup = 1
-    !counterbreak_item_box = 1
+    !counterbreak_powerup = 0
+    !counterbreak_item_box = 0
     !counterbreak_coins = 0
     !counterbreak_bonus_stars = 0
     !counterbreak_score = 0
@@ -215,8 +215,8 @@
 ; Changing this only works if the black box is disabled (if enabled,
 ; default values will be used instead).
 ; Note: you can also change these on the fly (see "docs/ram_map.txt").
-    !text_x_pos = $58
-    !text_y_pos = $6F
+    !text_x_pos = $08
+    !text_y_pos = $D0
 
 ; 0 = the cursor is static
 ; 1 = the cursor blinks like in vanilla menus
