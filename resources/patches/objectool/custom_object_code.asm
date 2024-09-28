@@ -130,12 +130,20 @@ CustExObjD0:
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
-	AND #$01 : TAX
-	BEQ +
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
+	AND #$03 : BEQ +++
+	DEC : BEQ ++
+	DEC : BEQ +
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	JSR ShiftObjUp
+
 	+
 
 	LDA #$00 : STA [$6B],Y
@@ -146,14 +154,9 @@ CustExObjD0:
 	LDA #$00 : STA [$6B],Y
 	LDA #$10 : STA [$6E],Y
 
-	JSR ShiftObjDown
+	JSR ShiftObjUp
 
-	TXA : BEQ +
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-	+
+	++
 
 	LDA #$00 : STA [$6B],Y
 	LDA #$10 : STA [$6E],Y
@@ -163,23 +166,7 @@ CustExObjD0:
 	LDA #$00 : STA [$6B],Y
 	LDA #$10 : STA [$6E],Y
 
-	JSR ShiftObjDown
-	
-	TXA : BEQ +
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-		JSR ShiftObjRight
-	+
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-    JSR ShiftObjRight
-	
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
+	+++
 
 	RTS
 CustExObjD1:
