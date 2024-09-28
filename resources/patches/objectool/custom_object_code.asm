@@ -61,12 +61,12 @@ CustExObj9C:   ; Enable Wario
 CustExObj9D:   ; Enable Waluigi
 CustExObj9E:   ; Disable Switch on L/R
 CustExObj9F:
-CustExObjA0:
-CustExObjA1:
-CustExObjA2:
-CustExObjA3:
-CustExObjA4:
-CustExObjA5:
+CustExObjA0:   ; Start as Mario
+CustExObjA1:   ; Start as Luigi
+CustExObjA2:   ; Start as Peach
+CustExObjA3:   ; Start as Daisy
+CustExObjA4:   ; Start as Wario
+CustExObjA5:   ; Start as Waluigi
 CustExObjA6:
 CustExObjA7:
 CustExObjA8:
@@ -128,13 +128,59 @@ CustExObjCF:
 
 CustExObjD0:
 	LDY $57
-	LDA #$30 : STA [$6B],Y
-
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
-	AND #$03
+	AND #$01 : TAX
+	BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
 
-	STA [$6E],Y
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	JSR ShiftObjDown
+
+	TXA : BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	JSR ShiftObjDown
+	
+	TXA : BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+
 	RTS
 CustExObjD1:
 CustExObjD2:
