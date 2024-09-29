@@ -10,7 +10,7 @@ rom: smw.smc
 ; Level resources
 level:
 *  characters.asm
-E  preserverng.asm
+E  preserverng.asm, kamek_magic.asm
 
 
 ; Overworld resources
@@ -18,7 +18,7 @@ overworld:
 
 ; Game mode resources
 gamemode:
-00  defaultcharacter.asm
+00  defaultcharacter.asm, gm_00_boot.asm
 05  defaultcharacter.asm
 0E  overworldswitch.asm
 10  uberasm_objects_gm10.asm, retry_gm10.asm
