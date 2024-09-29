@@ -121,6 +121,9 @@ org $03C511 : db $0C
 ;; GFX Tweaks & Fixes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
+; make fire-spitting piranha plants Yellow
+org $07F44E : db %00000100
+
 ; reset animation frame counter at level load
 org $00A5FA : db $FF
 
