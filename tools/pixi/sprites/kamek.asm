@@ -8,6 +8,8 @@
 ;#
 ;# It's partially commented... too lazy to finish the comments.
 
+;# default extra bytes: 00 FF 30 FF 02 15 04 FF FF 00
+
 ;#########################################################################
 ;# Extra byte information
 ;# 
