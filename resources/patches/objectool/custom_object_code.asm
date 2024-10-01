@@ -2,6 +2,51 @@
 
 incsrc "../../../shared/freeram.asm"
 
+
+if read1($00FFD5) == $23		; check if the rom is sa-1
+	if read1($00FFD7) == $0D ; full 6/8 mb sa-1 rom
+		fullsa1rom
+		!fullsa1 = 1
+	else
+		!fullsa1 = 0
+		sa1rom
+	endif
+	!sa1 = 1
+	!SA1 = 1
+	!SA_1 = 1
+	!Base1 = $3000
+	!Base2 = $6000
+	!dp = $3000
+	!addr = $6000
+	
+	!BankA = $400000
+	!BankB = $000000
+	!bank = $000000
+	
+	!Bank8 = $00
+	!bank8 = $00
+	
+	!SprSize = $16
+else
+	lorom
+	!sa1 = 0
+	!SA1 = 0
+	!SA_1 = 0
+	!Base1 = $0000
+	!Base2 = $0000
+	!dp = $0000
+	!addr = $0000
+
+	!BankA = $7E0000
+	!BankB = $800000
+	!bank = $800000
+	
+	!Bank8 = $80
+	!bank8 = $80
+	
+	!SprSize = $0C
+endif
+
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ; code for extended objects 98-FF
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,12 +61,12 @@ CustExObj9C:   ; Enable Wario
 CustExObj9D:   ; Enable Waluigi
 CustExObj9E:   ; Disable Switch on L/R
 CustExObj9F:
-CustExObjA0:
-CustExObjA1:
-CustExObjA2:
-CustExObjA3:
-CustExObjA4:
-CustExObjA5:
+CustExObjA0:   ; Start as Mario
+CustExObjA1:   ; Start as Luigi
+CustExObjA2:   ; Start as Peach
+CustExObjA3:   ; Start as Daisy
+CustExObjA4:   ; Start as Wario
+CustExObjA5:   ; Start as Waluigi
 CustExObjA6:
 CustExObjA7:
 CustExObjA8:
@@ -82,6 +127,48 @@ CustExObjCF:
 	db 1,2,4,8,16,32,64,128
 
 CustExObjD0:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03 : BEQ +++
+	DEC : BEQ ++
+	DEC : BEQ +
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	JSR ShiftObjUp
+
+	+
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	JSR ShiftObjUp
+
+	++
+
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+    JSR ShiftObjRight
+	
+	LDA #$00 : STA [$6B],Y
+	LDA #$10 : STA [$6E],Y
+
+	+++
+
+	RTS
 CustExObjD1:
 CustExObjD2:
 CustExObjD3:

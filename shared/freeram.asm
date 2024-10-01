@@ -91,6 +91,7 @@ endif
 !skull_raft_fix_freeram = $18E6|!addr ; 1 byte
 !sprite_scroll_fix_position_freeram = $0DC3|!addr ; 4 bytes
 !sprite_scroll_fix_displacement_freeram = $1487|!addr ; 4 bytes
+!store_rng_freeram = $7f9f44 ;FreeRAM
 !triangles_fix_freeram = $14BE|!addr ; 1 byte
 
 

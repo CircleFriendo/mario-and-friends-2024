@@ -10,6 +10,8 @@ rom: smw.smc
 ; Level resources
 level:
 *  characters.asm
+E  preserverng.asm
+
 
 ; Overworld resources
 overworld:

@@ -33,6 +33,15 @@ endif
 ;; Minor Tweaks ;;
 ;;;;;;;;;;;;;;;;;;
 
+; remove screen shake
+if !EXLEVEL == 0
+    org $00A2B8
+        db $80
+else
+    org $00A2B7
+        db $80
+endif
+
 ; check for interaction every single frame (as opposed to every other frame)
 org $02A0B2 : db $00 ; fireball-sprite
 org $01A7EF : db $00 ; mario-sprite
@@ -120,6 +129,9 @@ org $03C511 : db $0C
 ;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GFX Tweaks & Fixes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
+
+; make fire-spitting piranha plants Yellow
+org $07F44E : db %00000100
 
 ; reset animation frame counter at level load
 org $00A5FA : db $FF
