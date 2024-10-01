@@ -1,0 +1,54 @@
+Depending on the length or distance to the central axis, the distance should at Lunar Magic be installed off the central axis varies.
+This prevents problems with firebars etc. suddenly appearing on overlap the player and causing hurt unexpectedly.
+I am waiting for a time in the future when this shifting functionality will no longer be necessary due to PIXI updates.
+
+Firebars (normal) (minimum 2 fireballs)
+-Displace 1 tile for every 7 fireballs, Every 2 thereafter shifts 1 tile.
+
+Firebars (big) (minimum 1 fireball)
+-Displace 1 tile for every 4 fireballs, Every 1 thereafter shifts 1 tile.
+
+Rotodisc (normal) (It can be superimposed on the central axis and fastened.)
+-Displace 1 tile for Distance to central axis 48 dots, Every 16 dots thereafter shifts 1 tile.
+
+Rotodisc (big) (It can be superimposed on the central axis and fastened.)
+-Displace 1 tile for Distance to central axis 48 dots, Every 16 dots thereafter shifts 1 tile.
+
+Ball 'n' Chain (small) (minimum 1 chain)
+-Displace 1 tile for every 3 chains, Every 2 thereafter shifts 1 tile.
+
+Ball 'n' Chain (normal) (minimum 1 chain)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 1 tile.
+
+Ball 'n' Chain (small and long) (minimum 1 chain)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 1 tile.
+
+Ball 'n' Chain (normal and long) (minimum 1 chain)
+-Displace 4 tile for every 1 chains, Every 1 thereafter shifts 2 tile.
+
+Rotating Platfotm (2 Tiles platform) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 2 chains, Every 1 thereafter shifts 1 tile.
+
+Rotating Platfotm (3 Tiles platform) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 2 chains, Every 1 thereafter shifts 1 tile.
+
+Rotating Platfotm (4 Tiles platform) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 1 tile.
+
+Rotating Platfotm (5 Tiles platform) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 1 tile.
+
+Rotating Platfotm (2 Tiles platform and long) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 2 tile.
+
+Rotating Platfotm (3 Tiles platform and long) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 1 tile for every 1 chains, Every 1 thereafter shifts 2 tile.
+
+Rotating Platfotm (4 Tiles platform and long) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 2 tile for every 1 chains, Every 1 thereafter shifts 2 tile.
+
+Rotating Platfotm (5 Tiles platform and long) (minimum 1 and can be made invisible using GFX12 platform)
+-Displace 2 tile for every 1 chains, Every 1 thereafter shifts 2 tile.
+
+
+

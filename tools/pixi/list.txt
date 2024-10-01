@@ -7,5 +7,10 @@
 14 spooder.json
 15 zinger.json
 
+20 kamek.cfg
+21 firebars/FireBar.json
 
 A0 donut_sprite.cfg
+
+EXTENDED:
+00 kamek_sparkles.asm
