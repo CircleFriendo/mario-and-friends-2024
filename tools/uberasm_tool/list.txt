@@ -9,9 +9,9 @@ rom: smw.smc
 
 ; Level resources
 level:
-*  characters.asm
-E  preserverng.asm, kamek_magic.asm
-
+*   characters.asm
+E   preserverng.asm
+25  preserverng.asm, kamek_magic.asm
 
 ; Overworld resources
 overworld:
