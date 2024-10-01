@@ -8,7 +8,7 @@
 15 zinger.json
 
 20 kamek.cfg
-
+21 firebars/FireBar.json
 
 A0 donut_sprite.cfg
 
