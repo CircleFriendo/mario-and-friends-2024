@@ -127,6 +127,8 @@ CustExObjCF:
 	db 1,2,4,8,16,32,64,128
 
 CustExObjD0:
+	;; Rectangle (2x0, 2x1, 2x2, 2x3)
+
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
@@ -135,42 +137,95 @@ CustExObjD0:
 	DEC : BEQ +
 
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
     JSR ShiftObjRight
 	
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
 	JSR ShiftObjUp
 
 	+
 
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
     JSR ShiftObjRight
 	
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
 	JSR ShiftObjUp
 
 	++
 
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
     JSR ShiftObjRight
 	
 	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
+	LDA #$11 : STA [$6E],Y
 
 	+++
 
 	RTS
+
 CustExObjD1:
+	;; 3x3 square, (shift down 4 tiles)
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$01 : BEQ +
+		JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown
+	+
+
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjDown
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjDown
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	
+	RTS
+
 CustExObjD2:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03 : BEQ +
+	DEC : BEQ ++
+	DEC : BEQ +++
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		BRA +
+	+++
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		BRA +
+	++
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	+
+
+	RTS
+
 CustExObjD3:
 CustExObjD4:
 CustExObjD5:
