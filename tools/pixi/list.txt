@@ -9,6 +9,9 @@
 
 20 kamek.cfg
 21 firebars/FireBar.json
+22 birdo/birdo_smb2.cfg
+23 birdo/birdo_fire.cfg
+24 birdo/carryable_egg.cfg
 
 A0 donut_sprite.cfg
 

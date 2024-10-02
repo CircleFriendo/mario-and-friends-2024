@@ -183,6 +183,22 @@ CustExObjD2:
 	RTS
 
 CustExObjD3:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$07 : INC : STA $01
+	LDA #$02 : STA $00
+	LDA #$00 : STA $02
+	LDA #$11 : STA $03
+	JSR Rectangle
+
+	LDA #$01 : STA $01
+	LDA #$59 : STA $02
+	LDA #$01 : STA $03
+	JSR Rectangle
+	
+	RTS 
+
 CustExObjD4:
 CustExObjD5:
 CustExObjD6:
