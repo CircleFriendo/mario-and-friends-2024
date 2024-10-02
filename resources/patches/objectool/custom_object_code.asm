@@ -132,45 +132,16 @@ CustExObjD0:
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
-	AND #$03 : BEQ +++
-	DEC : BEQ ++
-	DEC : BEQ +
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
-
-    JSR ShiftObjRight
+	AND #$03
+	BEQ +
+		STA $01
+		LDA #$02 : STA $00
+		LDA #$00 : STA $02
+		LDA #$11 : STA $03
+		JSR Rectangle
+	+ RTS 
 	
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
 
-	JSR ShiftObjUp
-
-	+
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
-
-    JSR ShiftObjRight
-	
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
-
-	JSR ShiftObjUp
-
-	++
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
-
-    JSR ShiftObjRight
-	
-	LDA #$00 : STA [$6B],Y
-	LDA #$11 : STA [$6E],Y
-
-	+++
-
-	RTS
 
 CustExObjD1:
 	;; 3x3 square, (shift down 4 tiles)
@@ -181,25 +152,10 @@ CustExObjD1:
 	AND #$01 : BEQ +
 		JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown
 	+
-
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjDown
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjDown
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	JSR ShiftObjRight
-	LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
-	
+	LDA #$03 : STA $00 : STA $01
+	LDA #$00 : STA $02
+	LDA #$11 : STA $03
+	JSR Rectangle
 	RTS
 
 CustExObjD2:
@@ -677,6 +633,29 @@ SlopeTilemapData:
 ; template subroutines
 ;
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+;------------------------------------------------
+; make a rectangular object
+;------------------------------------------------
+
+; $00: width
+; $01: height
+; $02-$03: tile number
+
+Rectangle:
+	--
+		LDA $00 : STA $04
+		-
+			LDA $02 : STA [$6B],y
+			LDA $03 : STA [$6E],y 
+			JSR ShiftObjRight
+			DEC $04 : BNE -
+		JSR ShiftObjUp
+		DEC $01 : BNE --
+
+	RTS
+
 
 ;------------------------------------------------
 ; make an object consisting of a 2x2 square
