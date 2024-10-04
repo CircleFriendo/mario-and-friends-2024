@@ -200,7 +200,33 @@ CustExObjD3:
 	RTS 
 
 CustExObjD4:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$07 
+	CMP #$04 : BMI +
+		INC
+	+
+	INC : STA $00
+	-
+		JSR ShiftObjRight
+		DEC $00
+		BNE -
+	LDA #$1F : STA [$6B],Y : LDA #$01 : STA [$6E],Y
+	RTS
+
 CustExObjD5:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$01 : BEQ +
+		LDA #$30 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+		JSR ShiftObjUp
+		LDA #$20 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+		JSR ShiftObjUp
+		LDA #$10 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+	+ RTS
+
 CustExObjD6:
 CustExObjD7:
 CustExObjD8:
