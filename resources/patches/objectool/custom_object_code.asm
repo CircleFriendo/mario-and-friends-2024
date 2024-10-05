@@ -127,53 +127,106 @@ CustExObjCF:
 	db 1,2,4,8,16,32,64,128
 
 CustExObjD0:
+	;; Rectangle (2x0, 2x1, 2x2, 2x3)
+
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
-	AND #$03 : BEQ +++
-	DEC : BEQ ++
-	DEC : BEQ +
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-    JSR ShiftObjRight
+	AND #$03
+	BEQ +
+		STA $01
+		LDA #$02 : STA $00
+		LDA #$00 : STA $02
+		LDA #$11 : STA $03
+		JSR Rectangle
+	+ RTS 
 	
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
 
-	JSR ShiftObjUp
 
+CustExObjD1:
+	;; 3x3 square, (shift down 4 tiles)
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$01 : BEQ +
+		JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown : JSR ShiftObjDown
+	+
+	LDA #$03 : STA $00 : STA $01
+	LDA #$00 : STA $02
+	LDA #$11 : STA $03
+	JSR Rectangle
+	RTS
+
+CustExObjD2:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03 : BEQ +
+	DEC : BEQ ++
+	DEC : BEQ +++
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjLeft : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		BRA +
+	+++
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjUp : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		BRA +
+	++
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjDown : LDA #$00 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
 	+
 
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-    JSR ShiftObjRight
-	
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-	JSR ShiftObjUp
-
-	++
-
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-    JSR ShiftObjRight
-	
-	LDA #$00 : STA [$6B],Y
-	LDA #$10 : STA [$6E],Y
-
-	+++
-
 	RTS
-CustExObjD1:
-CustExObjD2:
+
 CustExObjD3:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$07 : INC : STA $01
+	LDA #$02 : STA $00
+	LDA #$00 : STA $02
+	LDA #$11 : STA $03
+	JSR Rectangle
+
+	LDA #$01 : STA $01
+	LDA #$59 : STA $02
+	LDA #$01 : STA $03
+	JSR Rectangle
+	
+	RTS 
+
 CustExObjD4:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$07 
+	CMP #$04 : BMI +
+		INC
+	+
+	INC : STA $00
+	-
+		JSR ShiftObjRight
+		DEC $00
+		BNE -
+	LDA #$1F : STA [$6B],Y : LDA #$01 : STA [$6E],Y
+	RTS
+
 CustExObjD5:
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$01 : BEQ +
+		LDA #$30 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+		JSR ShiftObjUp
+		LDA #$20 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+		JSR ShiftObjUp
+		LDA #$10 : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+	+ RTS
+
 CustExObjD6:
 CustExObjD7:
 CustExObjD8:
@@ -622,6 +675,29 @@ SlopeTilemapData:
 ; template subroutines
 ;
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+;------------------------------------------------
+; make a rectangular object
+;------------------------------------------------
+
+; $00: width
+; $01: height
+; $02-$03: tile number
+
+Rectangle:
+	--
+		LDA $00 : STA $04
+		-
+			LDA $02 : STA [$6B],y
+			LDA $03 : STA [$6E],y 
+			JSR ShiftObjRight
+			DEC $04 : BNE -
+		JSR ShiftObjUp
+		DEC $01 : BNE --
+
+	RTS
+
 
 ;------------------------------------------------
 ; make an object consisting of a 2x2 square
