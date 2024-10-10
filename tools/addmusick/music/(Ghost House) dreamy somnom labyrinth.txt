@@ -1,0 +1,365 @@
+#amk 2
+
+#path "dreamy somnom labyrinth"
+
+#spc
+{
+	#title "Dreamy Somnom Labyrinth"
+	#game "Mario & Luigi: Dream Team"
+	#author "Yoko Shimomura"
+	#comment "ported by maxodex"
+}
+
+#samples {
+	#optimized
+	"piano.brr"
+	"piano2.brr"
+	"lowpiano.brr"
+	"bass.brr"
+	"square.brr"
+	"string.brr"
+	"harp.brr"
+	"harp2.brr"
+	"marimba.brr"
+	"aperc1.brr"
+	"aperc2.brr"
+}
+
+#instruments {
+	"piano.brr" $fe $ef $b8 $02 $00;$01 $50		;@30
+	"bass.brr" $fe $e0 $b8 $04 $00
+	"square.brr" $fa $f2 $c0 $02 $fa
+	"string.brr" $fa $e0 $b8 $02 $14
+	"harp.brr" $ff $f3 $b8 $03 $00		;@34
+	"marimba.brr" $ff $f3 $b8 $06 $00
+	"harp2.brr" $ff $ef $b8 $06 $00
+	"marimba.brr" $ff $f8 $b8 $06 $00
+	"aperc1.brr" $00 $00 $7f $03 $00	;@38
+	"aperc2.brr" $00 $00 $7f $02 $80
+	"harp.brr" $fe $f2 $b8 $03 $00		;@40
+	"harp2.brr" $ff $ee $b8 $06 $00
+	@23 $fc $e0 $b8 $03 $20
+	"lowpiano.brr" $ff $f0 $b8 $03 $00
+	"piano.brr" $ff $f1 $b8 $02 $00		;@44
+	"piano2.brr" $ff $f1 $b8 $01 $c0 ;$01 $a5
+}
+
+(!100)[ $f4 $09 ]
+(!200)[ v100 $e8$60$92 ]
+
+(!300)[ $fa $01 $b8 ]
+(!301)[ $fa $01 $b6 ]
+(!302)[ $fa $01 $b4 ]
+(!400)[ $fa $01 $d4 ]
+
+$ef $ff $30 $d0
+$f1 $04 $64 $00
+
+"ROFF = (!100,0)"
+"rel1 = (!100,-1)(!300,3)"
+"rel2 = (!100,-1)(!301,3)"
+"rel3 = (!100,-1)(!302,3)"
+
+"@piano = @30 rel2 v185"
+"@lp = @43"
+
+"@square = @32 (!400,-1)(!100,1,32)"
+"@bass = @31 $f4$03 q7f"
+
+"@harp = @34"
+"@harp2 = @36"
+"@harp3 = @40"
+"@harp4 = @41"
+
+"@marimba = @35"
+"@marimba2 = @37"
+
+"@p1 = @38"
+"@p2 = @39"
+"@p3 = @42 y9 q77"
+
+"@str = @33 l1"
+"fade1 = v75 $e8$c0$88"
+"fade2 = $e8$c0$56"
+"fade3 = (!200,-1)"
+"fade4 = v75 $e8$c0$95"
+"pfade1 = $dc$c0$08"
+"pfade2 = $dc$c0$0c"
+
+$f4$02 t42 w130 /
+
+
+#0
+
+$f4$01 l8 y10
+[[ [ @square v205 o2
+d+a+>d+f+a+>d+f+g+]
+ROFF @harp2 v130 o3 r4d+2. ]]2
+[[* r1]]2 ROFF $f4$01
+@piano l8
+o4
+[[ rf+g+rf+g+ra+
+g+rf+g+rff+r
+rf+g+rf+g+rf
+f+rd+frc+d+r ]]3
+ROFF
+v230 l16 y10
+(1)[ @marimba2 o1 d+a+>d+f+a+>d+f+a+8
+<<f+a+>d+f+a+f+d+ ]4
+$ef $ff $20 $e0
+(9)[ v230 @harp3 rel3 l8 ;v230 y10
+o5 q7f d+r q7a <a+r q7f >fr q7a <a+r>
+q7f g+r q7a d+r q7f fr q7a d+r
+q7f d+r q7a <a+r q7f >fr q7a <a+r>
+q7f a+.r16 g+.r16 f+.r16 c+.r16 ]
+$ef $ff $30 $d0
+(7)[ v185 ROFF
+r8 @30 o3 q7c y12 b8 q7f y8 >b2.r1 ]
+l6 v199 @44
+(2)[ y10 o4 a+g+ q79 g+ q7f a+g+ q79 g+ q7f
+f+f q79 f q7f d+c+<b] a+8
+(8)[ v185 q7a y12 >c+8 q7f y8 >c+2.r1 ]
+v199 y10 @44
+(3)[ y10 [[ o4 q7d g+ q7e a+ q7f b ]]2
+>c+d+c+<ba+g+] a+=23 q7f ^=1
+(4)[ @45 v205 o5 l8 rel2
+f+g+rf+g+ra+
+g+rf+g+rff+r
+rf+g+rf+g+rf
+f+rd+frc+d+r ]
+(7)
+l6 v199 @44
+(5)[ y10 o4 b>c+ q7c d+ q7f <b>c+ q7c d+ q7f
+fd+ q7d c+ q7f <ba+g+ ] a+8
+(8)
+v185 y10 @44
+(6)[ y10 [[ o4 q7d g+ q7e a+ q7f b ]]2
+>c+d+f g+f+f] $ed$7f$f3 v172 f+=23 q7f ^=1
+(4)
+ROFF
+(9)
+
+
+#1 /
+
+; @str o4 v130
+; d+d+d+d+
+@harp2 o3 v210 ROFF
+[[ q7f d+1 q7d <d+1>]]2
+o1 @bass v245
+d+2...r16
+d+8.a+16.r16. >d+2^8
+<d+2...r16
+d+8.>d+16.r16. <d+2^8
+[[ d+8.a+16.r16.>d+2^8<
+d+8.>d+16.r16. <d+2^8
+d+8.>d+16.r16. <d+4^16.r32 d+8..r32
+d+8.>d+16.r16. <d+2^8 ]]3
+r8 $f4$03 v135 (1)3 v130 (1)
+(10)[ @harp3 rel3 l8 v175 y10
+o4 r4> q7f c+r<d+r>c+r
+<a+rfra+rd+4r4
+o4 >c+r<d+r>c+r
+q7e c+rc+r<g+4r ]
+"@b2 = @31 q7f v225 y10 $f4$03"
+"@p6 = @p3 v255 $fa$03$a0 $f4$03 o4 d8 o2 @b2 $fa$03$00"
+ROFF
+@b2
+[[
+o2 c-8.f+16.r16.b2^8
+c-4 @p6 c-4b16r16c-4
+c-8.b16.r16.c-4r8c-4
+c-4 @p6 c-4b16r16c-4
+c+8.g+16.r16.>c+2^8<
+c+4 @p6 c+4>c+16r16<c+4
+c+8.>c+16.r16.<c+4r8c+4
+c+4 @p6 c+4>c+16r16<c+4
+d+8.a+16.r16.>d+2^8<
+d+4 @p6 d+4>d+16r16<d+4
+d+8.>d+16.r16.<d+4r8d+4
+d+4 @p6 d+4>d+16r16<d+4 ]]2
+$f4$03 r8
+(10)
+[[r2]]8
+
+
+#2
+
+@str $f4$01
+[[ o4 y12
+fade1 pfade1 a+
+fade2 pfade2 >g+
+fade1 pfade1 <a+
+fade2 pfade2 a+ ]]2
+$f4$01 r8
+@piano l8 y10
+[[ o4 d+frd+frf+
+frd+frc+d+r
+rd+frd+frc+
+d+r<a+>c+r<g+a+r4> ]]3
+ROFF
+r8 v85 (1)4
+@harp4 v155 y10
+o4 d+1<d+1>d+1<d+2..
+(21)[ v185 ROFF
+r24 @30 o4 y11 d+12^16 $fa$01$b3 ^2^8.
+r1 ]
+@45 v170
+$fa$02$0c (2) $fa$02$00 o4 a+8^24
+(22)[ v185 @30 y11 f12^16 $fa$01$b3 ^2^8.
+r1]
+@45 v170
+$fa$02$0c (3) $fa$02$00 o5 a+=23 q7f ^=1
+(20)[ v205 l8 o5 rel2
+d+frd+frf+
+frd+frc+d+r
+rd+frd+frc+
+d+r<a+>c+r<g+a+r>]
+ROFF r8
+(21)
+@45 v180
+$fa$02$0c (5) o4 a+8^24 $fa$02$00
+(22)
+@45 v180
+$fa$02$0c (6) ^8 $fa$02$00
+(20)
+ROFF
+@harp4 v175 y10 ;q7f
+o3 [[ d+1<d+1> ]]2
+[[r2]]100
+
+
+#3
+
+@str
+[[ o5 y8
+fade1 pfade2 c+
+fade2 pfade1 ^
+fade1 pfade2 ^
+fade2 pfade1 ^ ]]5
+fade1 <a+1. $fa$01$aa ^1^1.
+@harp4 v160 y10
+[[ r8 o3 a+1 q7a <a+2.. q7f ]]2
+y12
+[[ @str o4 fade3 b>c+d+ff+g+a+g+
+ROFF fade4 f+1. $fa$01$a9 ^1^1. ]]2
+"fade5 = v70 $e8$c0$78 @str"
+"fade6 = $e8$c0$9a ^1 $fa$01$a7 ^1^1"
+o4 fade5 a+1 fade6
+[[r2]]100
+
+
+#4 $fa$03$00
+
+@str
+[[ o5 y12
+fade1 pfade1 $f4$01 f
+fade2 pfade2 ^
+fade1 pfade1 ^
+fade2 pfade2 f+2 $f4$01 ^2 ]]5
+fade1 d+1. $fa$01$aa ^1^1.
+@harp4 v160 y10
+o3 [[ d+1<d+1> ]]2
+y8 $fa$03$25
+[[ @str o4 fade3 d+ff+g+a+b>c+<b
+ROFF fade4 a+1. $fa$01$a9 ^1^1. ]]2
+o5 fade5 d+1 fade6
+[[r2]]100
+
+
+#5 $fa$03$00 y10
+
+v230
+(50)[ @harp l8
+q7f o5 d+4 q7b <a+>c+
+q7f f q79 <d+ q7b a+>c+
+q7f g+ q7a <a+> q7b d+<f
+q7f >f q7b <a+>d+<d+>
+q7f d+4 q7b <a+>c+
+q7f f q79 <d+ q7b a+>c+
+q7f a+ q79 c+ q7f g+ q79 c+
+q7f f+ q7a <g+> q7f c+4 ]2
+v220
+*3
+(51)[
+v255 $fa$03$90
+@p1 o4 q7f y11 c8. y9 q78 c8.
+@p2 q7e y11 c16 q7f y8 c8 q76 y12 c16 y8 q78 c8 y13 q73 c16 y7 c8.
+@p1 o4 q7f y9 c8. y11 q78 c8.
+@p2 q7e y9 c16 q7f y12 c8 q76 y8 c16 y12 q78 c8 y7 q73 c16 y13 c8.
+]2
+r8. v85 y11 ;$fa$03$90
+(52)[ @harp3 l8
+q7f o5 d+4 q7b <a+>c+
+q7f f q79 <d+ q7b a+>c+
+q7f g+ q7a <a+> q7b d+<f
+q7f >f q7b <a+>d+<d+>
+q7f d+4 q7b <a+>c+
+q7f f q79 <d+ q7b a+>c+
+q7f a+ q7d c+ q7f g+ q7d c+
+q7f f+ ] q7d o4 g+> q7f c+16
+"@m2 = @marimba2 v235 y10"
+"@p7 = @p3 v255 $fa$03$a0 o4 d16 o1 q7f @m2 $fa$03$00"
+l16 ROFF
+[
+[[ @p7 a+>d+f+a+>d+f+a+ q76 f+ q79 a+
+q7f <<a+>d+f+a+f+d+ ]]2
+[[ @p7 b>d+f+b>d+f+b q76 f+ q79 b
+q7f <<b>d+f+bf+d+ ]]2
+[[ @p7 a+>c+fa+>c+fa+ q76 f q79 a+
+q7f <g+a+>c+<a+g+c+ ]]4
+[[ @p7 a+>d+f+a+>d+f+a+ q76 f+ q79 a+
+q7f <<a+>d+f+a+f+d+ ]]4
+]2
+@harp4 v160 y10 ;q7f
+[[ r8 o3 a+1 q7a <a+2.. q7f ]]2
+[r1]100
+
+
+#6 v160 /
+
+@marimba rel1 $fa$03$00
+[[ y10 o5 q4f d+8 q42 d+16 q46 y12 d+16
+y9 q4a d+8 q42 y10 d+16 y8 q45 d+16
+y10 q4f d+8 q43 d+16 q45 y12 d+16 y10 q4a d+8 q27>d+8
+y11 o5 q4f d+8 q43 d+16 q45 d+16
+y9 q4a d+8 q43 >d+16< q45 d+16
+y10 q4f d+8 q43 d+16 q45 y12 d+16 y10 q4a d+8 q15 >d+8 $e8$ff$a0 ]]4
+(51)6
+[[r2]]6 ;w180
+$e1$c0$73 ^1 w130
+r4. v75 y9 ;$fa$03$90
+(52) q7f
+$fa$03$a0
+y10 o4 v255
+"@p4 = @p1 y10"
+"@p5 = @p2 y10"
+[[ @p4 c8. q7a c16 @p3 d8 @p4 q77 c8
+@p3 d8 @p5 q7f c8 @p3 d16 @p5 q79 c8.
+@p4 q7f c8. q7a c16 @p5 q7f d8 @p4 q77 c16
+@p5 q79 c16 @p3 d8 @p5 q77 c8
+@p3 d16 @p5 q76 c16 @p4 q7a c8 ]]12
+@harp4 v155 y10 r4 q7f
+o4 d+1<d+1>d+1<d+2^8 v130 ^8
+[[r2]]100
+
+
+#7
+
+v130 y9 r8. (50) l8
+(52) q7d o4 g+> q7f c+16
+@marimba2 v230 l16 y10
+[[ o1 d+a+>d+f+a+>d+f+a+ q76 f+ q79 a+
+q7f <<a+>d+f+a+f+d+ ]]12
+[[r2]]16
+rel1
+(70)[ y10 v215 @lp o3 b8^12 @30 v225 q76 o4 y9 f+24^16 r8 y11 b2r16 ROFF q7f ]
+[[ r2 ]]6
+(71)[ y10 @lp o3 v215 a+8^12 v225 @30 q79 o4 y9 g+24^16 r8 y11 q76 >c+2r16 q7f ]
+[[ r2 ]]14
+(70) [[r2]]6 (71) [[r2]]6
+ROFF @45 v190 y10 o6 ^=7 f+=185 [[r2]]6
+y9 v115 r8. (52) q7d o4 g+8> q7f c+16
+[[r2]]100
+
+

@@ -1,0 +1,14 @@
+"kick.brr" 					$FF $E0 $B8 $04 $A0 $A4 $40 $40
+"clap.brr" 					$FF $E0 $B8 $04 $A0 $A4 $40 $40
+"synth bass.brr"				$BF $8C $B8 $01 $00 $A4 $40 $40
+"glass pad.brr"				$FF $E0 $B8 $06 $00 $A4 $40 $40
+"XG_sawtooth.brr" 			$FF $E0 $B8 $02 $9F $A4 $40 $40
+"high strings oct.brr"		$FA $E0 $B8 $06 $00 $A4 $40 $40
+"shaker.brr"					$FF $E0 $B8 $07 $A8 $A4 $40 $40
+"acoustic hat close.brr"		$FF $E0 $B8 $06 $00 $A4 $40 $40
+"acoustic hat open.brr"		$BF $12 $B8 $06 $80 $A4 $40 $40
+"power chord.brr"				$AF $A8 $B8 $04 $00 $A8 $40 $40
+"piano.brr"					$FF $F2 $B8 $04 $00 $A4 $40 $40
+"acoustic cymb.brr"			$8F $11 $00 $05 $00 $A4 $40 $40
+"snare.brr"					$FF $F6 $00 $06 $80 $A4 $40 $40
+"deep bass.brr"				$FF $EE $00 $01 $80 $A4 $40 $40

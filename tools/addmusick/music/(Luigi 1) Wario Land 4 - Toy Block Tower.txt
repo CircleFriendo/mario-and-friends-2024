@@ -1,0 +1,134 @@
+#amk 2
+
+#spc
+{
+	#title "Toy Block Tower"
+	#game "Wario Land 4"
+	#author "Ryoji Yoshitomi"
+	#comment "Ported by Dippy"
+}
+
+#path "toyblocktower"
+
+#samples
+{
+	#default
+	"bass organ.brr" 				
+	"kick.brr" 					
+	"snare.brr" 					
+	"clap.brr" 					
+	"trumpet.brr" 				
+	"guitar.brr" 					
+	"piano.brr" 					
+	"bass organ 2.brr" 			
+}
+
+#instruments
+{
+	"bass organ.brr" 				$FF $E0 $B8 $01 $44	;@30 
+	"kick.brr" 					$FF $E0 $B8 $03 $3A 	;@31
+	"snare.brr" 					$FF $F7 $B8 $03 $33 	;@32
+	"clap.brr" 					$FF $F8 $B8 $03 $33 	;@33
+	"trumpet.brr" 				$8F $67 $B8 $05 $40 	;@34
+	"guitar.brr" 					$AF $40 $B8 $02 $72 	;@35
+	"piano.brr" 					$9F $60 $B8 $02 $81  	;@36
+	"bass organ 2.brr" 			$FF $E0 $B8 $01 $43 	;@37
+}
+
+w242 t35 $F4 $02
+
+;Remote Commands
+(!100)[$F4 $09]
+(!101)[$FA $01 $B8]
+(!102)[$FA $01 $BA]
+(!103)[$FA $01 $B6]
+
+;Macros
+"G_B6=(!100,-1)(!103,3)"
+"G_B8=(!100,-1)(!101,3)"
+"G_BA=(!100,-1)(!102,3)"
+"K=@31c"
+"S=@32c"
+
+#0 v125 o4 ;Drums
+K4 c4 c6^24 c24 c4 c4 c6^24 c24 c12. S24 q7a K24 q7f S24 K24 q7a S24 q7c c24 q7f c12 c24
+(1)[K12. S12 K24 c12. S12. K12. S12 K24 K12. S12 S24]
+(6)[K12. S12 K24 c12. S12 S24 K12. S24 q7a K24 q7f S24 K24 q7a S24 q7c c24 q7f c12 c24]
+(1) K12. v85 $E8 $40 $7D [S24 c24 c24]3 c12. r12 
+q7a K24 q7f K24 S24 q7c c24 q7f c12 c24
+/ [K12. S12 K24 c12. S12. K12. S12 c24 K12. S12. K12. S12 K24 c12. S12. K12. S24 K24 c24 c12. S12 c24]3
+(1) (6) [r12 K24 c24 r24 S24]3 K24 c24 S24 c24 K24 c24
+[S24 K24 c24 r24 c24 c24 S24 r12 K12 S24  K12 S24 K12 c24 S12 K24 K12 S24
+K12. c12 c24 S12. K24 c24 S24 K12 S24 K24 c24 c24 S12. K24 c24 S24]3
+S24 K24 c24 r24 c24 c24 S24 r12 K12 S24  K12 S24 K12 c24 S12 K24 K12 S24
+K12. c12 c24 S12. K24 S24 c24 K24 S12 K24 c24 c24 S12 c24 K24 S24 c24
+
+
+#1 @30 o4 v99 G_B8 ;Bass Organ
+[c24 r12 c12. < g24 r12 g12. a+24 r12 a+12. f24 r12 f12. >
+c24 r12 c12. < g24 r12 g12. a+24 r12 a+12. f24 r24 f24 g12 a+24]2 >
+(4)[c24 r12 c12. < g24 r12 g12. a+24 r12 a+12. f24 r12 f12. >]
+c24 r12 c12. < g24 r12 g12. a+24 r6 a+12. f24 g12 f24 >
+/ (4)7 c24 r12 c12. < g24 r12 g12. a+24 r12 a+12. f12 g24 a+12 > 
+c12 r24 < g24 a+24 r24 > [c12 r24 < g24 a+24 r24]2 > c12. r24 
+v109 g12. $DD $10 $09 > g^12 r24 < q7a g12. $DD $10 $09 > g^12 r24 < q75 g12. $DD $10 $09 > g^12 r24 < q73 g12. $DD $10 $09 > g^12 r24 
+(9)[q7f g12. $DD $10 $09 < a^12 r24 > q7a g12. $DD $10 $09 < a^12 r24 > q75 g12. $DD $10 $09 < a^12 r24 > q73 g12. $DD $10 $09 < a^12 r24] <
+(8)[q7f g12. $DD $10 $09 > g^12 r24 < q7a g12. $DD $10 $09 > g^12 r24 < q75 g12. $DD $10 $09 > g^12 r24 < q73 g12. $DD $10 $09 > g^12 r24 <]
+q7f g12. $DD $10 $09 > f+^12 r24 < q7a g12. $DD $10 $09 > f+^12 r24 < q75 g12. $DD $10 $09 > f+^12 r24 < q73 g12. $DD $10 $09 > f+^12 r24 
+(8) q7f g12. $DD $10 $09 < a^12 r24 > q7a g12. $DD $10 $09 < a^12 r24 > q75 g12. $DD $10 $09 < a^12 r24 > q73 g12. $DD $10 $09 < a^12 r24 <
+(8) >> q7f v94 d12. $DD $10 $09 > d^6.^12. < d12. $DD $10 $09 > e^6^12 f6^12 <
+
+
+#2 @30 o4 v99 r1^1 G_B8 ;Trumpet Lead + Piano
+(3)[e24 r12 e12. f24 r12 f12. g24 r12 g12 f24 g12 f12. c24]
+e24 r12 e12. f24 r12 f12. g24 r12 [g12 f+24]2 g12 c24
+(3) e24 r12 e12. f24 r12 f12. g24 r4.^24 c24 / r12.
+@34 y11 v99 q7f G_B6 <
+g12 r24 a12 > c24 e12 q4f f6^12. q7f e12 d24 r12 q5f c2^24 @36 < G_B8 y09 v107 f24 r12 e12. d24 r24 < a+12. g24
+@34 y11 v99 G_B6 > r12. g24 r12 a24 r12 > c24 r12 f12. r12. e24 r24 e24 r12 c2^24 
+@36 y09 v107 G_B8 < a+12 > c24 r12 < a24 > c12 d24 r12 < g24 >
+@34 y11 v99 G_B6 c24 r12 c12. < g24 r24 > c24 e24 r24 f6 r12 e24 f12 f24 r12 e24 r12 q5f c2^24 r4.
+c24 r12 c12. < g12 a24 > c12 < a24 r12 a+6 a24 r12 g12 q5f c2^24 q7f r4..^48 > 
+c6 q79 c12 q7f e6 q79 e12 q7f f6 q79 f12 q7f g6 q79 g12.
+[r1]8
+
+
+#3 @30 o3 v99 r1^1^1^2.. G_B8 ;Piano Accompany
+g12. $DD $10 $09 > g ^2^6^24 a24 a+6^24 a24 g2 r2
+/ r12. @36 < y09 v114 g6^12 a24 r12 a+12. r12. a+12 a24 r12 g24 r12 c3^12 a+24 r12 a12. g24 r24 d+24 e12 g24
+r12. g6^12 a12. a+6^24 a24 a+12 a24 r12 g24 r12 > c24 r12 c6^12 c24 d+12 e24 r12 c24 e12 f24 r12 c24  
+f+12 g24 d+12 c24 < a+24 r12 g12. a+6^24 a24 a+12 a12. g24 r12 e3^12 f4 f+4
+g24 r12 c6^12 d+12. f4 d+6^24 c2^24 r4..^48 c3. d6^12 e6 f12.
+v120 g6^12 g6^24 g6^12. g12 a12 r24 g12 r24 f+24 d3. < b24 r12 > c+12 d12 r24 e24 f+2.^6 f24 e24 d1
+g6^12 g6^24 g6^12. g12 a12 r24 f+12 r24 e24 d3. < b24 r12 > c+12 d12 r24 e24 f+2.^6 f24 e24
+d2 c6^24 < b24 g24 a+24 b24 > c24 d+24 e24
+
+
+#4 ;Guitar 1
+[r1]6
+/ @35 o4 v108 y09 q1f G_BA [r12. g12. r12. a12. r12. a+12. r12. a12.]8
+r1 > q6f v82 [d6^24 [[d24 d24 r24]]6 c+24 c+6 r24 [[c+24 c+24 r24]]6 c+24]3
+d6^24 [d24 d24 r24]6 c+24
+r1
+
+
+#5 @33 o4 v115 ;BG Stuff (Claps & Bass Organ 2)
+(5)[r1^2.. c12.] (2)[r2.. c12.] r2.. c12 c24
+(2) (7)[r2 c6^12 q79 c24 q7c c24 q7e c24 q7f c12 c24]
+/ @33 v115 (5)3 (2)(7) r1
+@37 v75 g2. q77 g4 q7f d2. q77 d4 q7f g2. q77 g4 q7f f+2. q77 f+4
+q7f e2. q77 e4 q7f d2. q77 d4 q7f d2. q77 d4 q7f f4^12. q77 f12. q7f g12. r12. f12. r12.
+
+
+#6 ;Guitar 2
+[r1]6
+/ @35 o4 v108 y09 q1f G_BA [r12. e12. r12. f12. r12. g12. r12. f12.]8
+r1 q6f v82 [b6^24 [[b24 b24 r24]]6 a24 a6 r24 [[a24 a24 r24]]6 a24]3
+b6^24 [b24 b24 r24]6 a24
+r1
+
+
+#7 @36 y09 v107 o4 G_B8 ;BG Stuff 2 (Piano)
+[r1]6 / [r1]4
+d12 r24 c12 < g24 r1^2^24 r6^24 [r1]11
+

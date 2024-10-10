@@ -1,0 +1,403 @@
+#amk 2
+#spc
+{
+	#title		"The Fanged Fastener"
+	#game		"Paper Mario: The Origami King"
+	#author		"Captain 3, Nintendo"
+	#comment	"Not compatible with much... Gl"
+}
+#path "StaplerFight"
+#samples
+{
+#minimal
+	"DamagedVocalChords.brr"
+	"Drums_Kick.brr" 
+	"Drums_Kick+Crash.brr"
+	"Drums_Kick+Open.brr"
+	"Drums_Kick+Snare+Closed.brr"
+	"Drums_Kick+Snare+Open.brr"
+	"Drums_Open.brr"
+	"Drums_Snare+Open.brr"
+	"Drums_Tom.brr"
+	"GuitarLeft.brr"
+	"GuitarLeftBass.brr"
+	"GuitarRight.brr"
+	"GuitarRightBass.brr"
+	"HappyPlucking1.brr"
+	"HappyPlucking2.brr"
+	"HappyPlucking3.brr"
+	"HappyPlucking4.brr"
+	"HappyPlucking5.brr"
+	"HappyPlucking6.brr"
+	"HappyPlucking7.brr"
+	"HappyPlucking8.brr"
+	"HappyPlucking9.brr"
+	"HappyPlucking10.brr"
+	"HappyPlucking11.brr"
+	"live_bassfretless.brr"
+	"RobopincherLead.brr"
+	"Scratch.brr"
+	"SE02-SquareGhostFunk.brr"
+	"sus mid.brr"
+	"TuvanDrones.brr"
+	"Tweak-TwerkLead.brr"
+	"whospy 1.brr"
+	"MellotronChoir.brr"
+}
+#instruments
+{
+	"DamagedVocalChords.brr"		$FF $E0 $FF $05 $48	;@30 Damaged Vocal Chords
+	"Drums_Kick.brr" 				$FF $F0 $50 $03 $D0	;@31 Drums (Kick)
+	"Drums_Kick+Crash.brr"			$FF $F0 $50 $03 $D0	;@32 Drums (Kick+Crash)
+	"Drums_Kick+Open.brr"			$FF $F0 $50 $03 $D0	;@33 Drums (Kick+Open Hat)
+	"Drums_Kick+Snare+Closed.brr"	$FF $F0 $50 $03 $D0	;@34 Drums (Kick+Snare+Closed Hat)
+	"Drums_Kick+Snare+Open.brr"		$FF $F0 $50 $03 $D0	;@35 Drums (Kick+Snare+Open Hat)
+	"Drums_Open.brr"				$FF $F0 $50 $03 $D0	;@36 Drums (Open Hat)
+	"Drums_Snare+Open.brr"			$FF $F0 $50 $03 $D0	;@37 Drums (Snare+Open Hat)
+	"Drums_Tom.brr"					$FF $F0 $50 $03 $D0	;@38 Drums (Tom)
+	"GuitarLeft.brr"				$FF $E0 $FF $03 $D0	;@39 Stereo Guitar (Left)
+	"GuitarLeftBass.brr"			$FF $E0 $FF $03 $D0	;@40 Stereo Guitar (Left+Bass)
+	"GuitarRight.brr"				$FF $E0 $FF $03 $D0	;@41 Stereo Guitar (Right)
+	"GuitarRightBass.brr"			$FF $E0 $FF $03 $D0	;@42 Stereo Guitar (Right+Bass)
+	"HappyPlucking1.brr"			$FF $E0 $FF $15 $40	;@43 Happy Plucking 1
+	"HappyPlucking2.brr"			$FF $E0 $FF $15 $40	;@44 Happy Plucking 2
+	"HappyPlucking3.brr"			$FF $E0 $FF $15 $40	;@45 Happy Plucking 3
+	"HappyPlucking4.brr"			$FF $E0 $FF $15 $40	;@46 Happy Plucking 4
+	"HappyPlucking5.brr"			$FF $E0 $FF $15 $40	;@47 Happy Plucking 5
+	"HappyPlucking6.brr"			$FF $E0 $FF $15 $40	;@48 Happy Plucking 6 
+	"HappyPlucking7.brr"			$FF $E0 $FF $15 $40	;@49 Happy Plucking 7
+	"HappyPlucking8.brr"			$FF $E0 $FF $15 $40	;@50 Happy Plucking 8
+	"HappyPlucking9.brr"			$FF $E0 $FF $15 $40	;@51 Happy Plucking 9
+	"HappyPlucking10.brr"			$FF $E0 $FF $15 $40	;@52 Happy Plucking 10
+	"HappyPlucking11.brr"			$FF $E0 $FF $15 $40	;@53 Happy Plucking 11
+	"live_bassfretless.brr"			$FF $E0 $FF $07 $07	;@54 Bass
+	"RobopincherLead.brr"			$FF $E0 $FF $0A $A0	;@55 Robopincher Lead
+	"Scratch.brr"					$FF $E0 $FF $0F $40	;@56 Record Scratch
+	"SE02-SquareGhostFunk.brr"		$FF $E0 $FF $15 $00	;@57 SE02 - Square Ghost Funk
+	"sus mid.brr"					$FF $E0 $FF	$04 $04	;@58 Lead Guitar
+	"TuvanDrones.brr"				$FF $E0 $FF $03 $D0	;@59 Tuvan Drone
+	"Tweak-TwerkLead.brr"			$FF $E0 $FF $15 $40	;@60 Tweak-Twerk Lead
+	"whospy 1.brr"					$FF $E0 $FF $04 $04	;@61 Whospy synth
+	"MellotronChoir.brr"			$FF $E0 $FF $07 $A0 ;@62 Mellotron Choir
+}
+
+w200
+
+t70 ;170 BPM
+
+(!100)[$ED$7F$72]
+
+;-------------------------------------------------------------------
+
+#0  ;Damaged Vocal Chords, Drums
+
+@30 v200 o2
+
+f2 $DD$18$80>>d ^4^8 r8
+
+/
+
+v250
+
+(000)[@32c4 @35c4 @33c4 @35c4]1
+(001)[@33c4 @35c4 @33c4 @35c4]2
+@33c4 @35c4 @33c8 @35c8 c4
+
+(000)1
+(001)2
+@33c4 @35c8. @31c32 c32 @32c4 c4
+
+(002)[@32c4 @34c4 @31c4 @34c4]
+(003)[@31c4 @34c4 @31c4 @34c4]2
+@31c4 @34c4 @31c4 c4
+
+(002)1
+(003)2
+@31c8 @35c8 c4 @31c8 @35c8 c4
+
+(002)1
+@31c4 @34c4 @31c4 @34c8 @36c8
+(003)1
+@31c4 @34c4 @33c4 c4
+
+(002)1
+@31c4 @34c4 @31c4 @34c8 c16 c16
+@32c4 @35c4 @33c4 @35c4
+@32c4 c4 c4 c4
+
+(004)[@32c8 @36c8 @34c8 @36c8 @31c8 @36c8 @34c8 @36c8]1
+(005)[@31c8 @36c8 @34c8 @36c8 @31c8 @36c8 @34c8 @36c8]2
+@31c8 @36c8 @34c8 @36c8 @34c8 @36c8 @33c8 @37c8
+
+(004)1
+(005)2
+@31c8 @36c8 @34c8 @36c8 @35c4 c4
+
+(004)1
+(005)2
+@34c8 @36c8 @34c8 @36c8 @31c8 @35c4 c8
+
+(004)1
+@31c8 @36c8 @34c8 @36c8 q7D@38g16 g16 c16 c16 e16 c+16 < f16 c16 >
+q7F@35c4 @37c16 r16 @35c4 @37c16 r16 @35c4
+@37c16 r16 @35c8 < q7D@38g+24 g+24 d+24 d+24 c24 c24 > q7F@32c4 c4
+
+(006)[@32c4. @31c16 c16 @34c4 @31c4]1
+(007)[@33c4. @31c8 @34c8 @31c4.]1
+(006)1
+@32c4 @37c4 q7D@38g16 g16 c16 c16 e16 c+16 < f16 c16 > q7F
+
+(006)1
+(007)1
+@32c4 @31c8 c16 c16 @37c4 @31c4
+@37c32 c16. @31c8 @37c16 < q7D@38d+16 c16 < b16 >> q7F@32c4 c4
+
+(006)1
+(007)1
+(006)1
+@32c4 @31c4 @37c16 c16 c16 c16 q7D@38c16 < a+16 f16 c16 > q7F
+
+@32c4. @31c16 c16 @35c4. @31c16 c16
+(007)1
+@32c4 @31c8. c16 @35c4 c4
+@32c4 @31c4 @37c16 r8. c16 c8 c16
+
+@32c4. @31c16 c16 @35c4. @31c16 c16
+@32c4. @31c8 @37c8 @31c8 @37c16 c16 c16 c16
+@34c8. c8. c16 @31c16 @32c2
+@32c2. @36c16 r8.
+
+[r4 c16 r4.. c16 r8.]3
+@32c2. @36c16 r8.
+*3
+
+;-------------------------------------------------------------------
+
+#1	;Robopincher Lead, Scratch, Tweak-Twerk Lead, Happy Plucking, Bass
+
+@55 v130 o3
+
+r2. d8 r8 <<
+
+/
+
+(008)[@56a+32 r8 e32 r16. r32 r16. e32 r8.. e32 r16 > c32 < a+32 r16 > c32 < a+32 r16 >
+c16 r16 c32 < a32 r16 > c16 r16 c16 r16 < c32 c+32 d32 e32 a+32 > c32 c+32 d+32 e16 r16 e16 r16
+e16 < b16 f8 a+4 > e32 r32 d32 d32 < d16 e16 a+16 > c16 < e16 g16 > 
+c8 < f8 c32 c+32 d32 e32 a+32 > c32 c+32 d+32 < g16. a16. a+32 r32 g+32 a32 a+32 b16 > f16.]2
+
+[@60f+16 r16 d16 r8. d16 d16 f16 r16 d16 r8. d16 r16 f+16 r16 d16 r8. d16 d16 f+16 r16 d16 r16 f+16 r16 g+16 r16]
+a16 r16 d16 r8. d16 r16 a+16 r16 d16 r8. d16 r16 a16 r16 d16 r8. d16 r16 g+16 r8. g+8. r16
+*1
+a4 > d16 r16 < g+4 a8 a+8 r8 d+24 d24 d+24 d24 d+24 d24 e8 r8 e24 e24 e24 e24 e24 e24 f8
+
+v200
+@43c16 c16
+@45c16 r16 @43c16 r8. c16 c16 @44c16 r16 @43c16 r8. c16 r16 @45c16 r16 @43c16 r8. c16 c16 @45c16 r16 @43c16 r16 @45c16 r16 d16 r16 < 
+@52f16 r16 @48f16 r8. f16 f16 > @47d16 r16 < @50d+16 r8. d+16 r16 @53e16 r16 @49e16 r8. e16 e16 @51f+16 r8. f+16 r8. > 
+@45c16 r16 < @46g16 r8. g16 g16 @45b16 r16 @46f+16 r8. f+16 r16 @45a+16 r16 f+16 r8. f+16 f+16 @46g+16 r16 e16 r16 d+16 r16 @47e16 r16
+
+v130
+@54a+8 a+8 f8 a+8 a+8 a+8 a8 e8 g+4 a4 d+4 d4
+
+(008)2
+
+[@54d8 a8 a+8 a8 d8 g+8 r8 d8 d8 a8 a+8 a8 d8 g+8 r4]3
+d4 r8 d4 r8 d4 r8 d4 d8 d8 r8 d4
+d2. d4 c8 r8 g4 c4 g4 a+2 f4 d4 a2 a2 d2. > d4 < c4 g4 c4 g4 g+4 e4 e4 g+4 a4 b4 > c+4 < a4
+d4 f4 a4 > d4 c4 < c4 c4 g4 a+4 g+4 f4 d4 c+4 a4 a2 d4 f4 a4 > d4 c4 < c4 c4 g4 a+4 g+4 f4 d4
+d+2 d8 r4. d+2 d8 r8 d4 d+2 d8 r4. d+8 r16 d+8 r16 d+8 d2 
+
+(008)2
+
+;-------------------------------------------------------------------
+
+#2	;Robopincher Lead, Lead Guitar, Mellotron Choir, Tuvan Drone, Whospy synth, Tweak-Twerk Lead
+
+@55 v130 o3
+
+r1
+
+/
+
+(90)[r2]14
+r2 d8 r8 d8 r8
+
+$DE$50$0A$60 [@58f+8 d8 r8 d16 d16 f8 d8 r8 d8 f+8 d8 r8 d16 d16 f+8 d8 f+8 g+8]
+a8 d8 r8 d8 a+8 d8 r8 d8 a8 d8 r8 d8 g+8 r8 g+4
+*1
+a4 > d8 < g+4 a8 a+8. r16 d+24 d24 d+24 d24 d+24 d24 e8 r8 e24 e24 e24 e24 e24 e24 f8 r8 $DF
+
+q79@62y8f+2 f2 f+2 f+4 g+4 g2 f2 f+2 g+8 r8 g+8 r8 q7F
+
+$DE$50$0A$60 @58y10f+8 d16 r8. d16 d16 f8 c+16 r8. c+8 e16 r16 c16 r8. c16 c16 d+8 < b8 a+8 > c8
+d4 g+8 d8 g+8 d8 c4 f4 e4 d+4 d4 < $DF
+
+(!100,3) @59f1^1^1^1^2 r1^4 (!100,0) >>
+
+$DE$20$18$60 q7C@61d4 r1. $DF <<< q7F
+
+@60a+16 > c16 d16 e16 f16 g16 a16 a+16 a16 a+16 a16 g+16 a16 r16 > d16 r16 < d16 r16 e16 r16 f16 r16 c+4 d16 r16 e16 r16 c+16 r16 d16 r16 a16 a16 a16 r16 a16 r16 g+16 a16 g+16 g16 g+16 r16 > d8 < g+16 a16 g+16 g16 g+16 r16 >>
+
+$DE$20$18$60 @61a8. a+16 a16 g+16 d16 r16 > d16 r16 < a16 a+16 a16 g+16 d4 $DF
+
+$DE$50$0A$60 @58a16 a+16 a16 g+16 a8 > d8 < d8 e8 f8 c+4 d8 e8 c+8 d8 < a8 a8 a8 a4 r8 g+4 r8 > a4 r8 g+4 r8 a8 r8 a4
+
+[g+2 a4 > d4 f4 e16 f16 e8 c4 < g4]
+g+16 $DD$0C$0Ca ^2^16 d8 f8 a8 a+4 a16 a+16 a8 g+4 a4
+*1
+a4 g+4 a4 a+4 g+4 e4 > d4 c+4 <
+*1
+g+16 $DD$0C$0Ca ^2^16 d8 f8 a16 $DD$0C$0Ca+ ^4^16 a16 a+16 a8 g+4 a4
+g+4 f4 a4 > d4 f4 e4 g4 e4 f4. e8 d4 c4
+$E8$FE$60 c16 $DD$0C$0Cd ^1^1^4^8^16 $E8$BE$80 d2 $DD$60$60<d ^2 r2 <
+d8 d8 r8 d8 r8 d8 r8 d8 r8 d8 r8 d8 r8 d8 f+ $DD$06$06g+ d8 f+ $DD$06$06g+ d8 r8 d8 r8 d8 r8 d8 r2 $DF
+
+@55d8 r8 d8 r1^1^4^8 > $DE$20$18$60 q78@61d4 r4 d4 r2. < $DF q7F @55d8 r8
+
+;-------------------------------------------------------------------
+
+#3	;Guitar (Stereo) (Left)
+
+@39 v150 o4 y20
+
+d+8 $DD$18$90>c ^2^4^8
+
+/
+
+[@40c8 < g8 g+8 e8 r8 c8 r8 c8]
+r8 c8 r8 c8 r8 c8 c+8 c8
+*1 r8 c8 r8 c16 r16 c+4 c+4
+*1 r8 c8 r8 c8 r8 c8 c+8 c8
+d+4 d+4 d+4 d+4 f+8 f+8 f+8 $DD$18$18d+ ^8 c8 r8 c4
+
+[c8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 > c8 < c8]
+> c8 < c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 f+4 f+4
+*1 >
+q7B@39c8 < c8 r8 c8 r8 c16 r16 c4 c16 c16 c16 c16 a16 $DD$0C$24c ^8^16 d+16 f+16 d+16 f+16 a16 $DD$0C$24c ^8^16 @40
+
+q7F
+*1
+> c8 < c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 f+4 f+4
+a8 a8 r8 a8 g+8 g+8 r8 g+8 g8 g8 r8 g8 f+8 f+8 r8 f+8
+q7B@39g+2. g4 f+4 g4 f4 e4
+
+[q7F@40c8 g8 g+8 g8 c8 f+8 r8 c8 c8 g8 g+8 g8 c8 f+8 r8 q7B@39c16 r16]4
+[g8]16 [f+8]14 f+8 $DD$18$18d+ ^8 [d+8]16 g4 r8 c4 r8 g4 r8 c4 r8 c8 r8 c4
+[c2 c2 < a+4 a+4 a+4 a+4 g+2 g+2] 
+g2 g2
+*1
+f+2 g2
+*1
+g2 g2 >
+*1
+c+2 c8 r4. c+2 c8 r4. c+2 c8 r4. c+8 r16 c+8 r16 c+8 c2 (90)8
+
+c8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 e $DD$00$06f+ c8 e $DD$00$06f+ c8 r8 c8 r8 c8 r8 c8 r4 f+16 $DD$0C$18e ^8^16 $DD$00$54>d ^2
+
+;-------------------------------------------------------------------
+
+#4	;Guitar (Stereo) (Right)
+
+@41 v150 o4 y0
+
+d+8 $DD$18$90>c ^2^4^8
+
+/
+
+[@42c8 < g8 g+8 e8 r8 c8 r8 c8]
+r8 c8 r8 c8 r8 c8 c+8 c8
+*1 r8 c8 r8 c16 r16 c+4 c+4
+*1 r8 c8 r8 c8 r8 c8 c+8 c8
+d+4 d+4 d+4 d+4 f+8 f+8 f+8 $DD$18$18d+ ^8 c8 r8 c4
+
+[c8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 > c8 < c8]
+> c8 < c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 f+4 f+4
+*1 >
+q7B@41c8 < c8 r8 c8 r8 c16 r16 c4 c16 c16 c16 c16 a16 $DD$0C$24c ^8^16 d+16 f+16 d+16 f+16 a16 $DD$0C$24c ^8^16 @42
+
+q7F
+*1
+> c8 < c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 f+4 f+4
+a8 a8 r8 a8 g+8 g+8 r8 g+8 g8 g8 r8 g8 f+8 f+8 r8 f+8
+q7B@41g+2. g4 f+4 g4 f4 e4
+
+[q7F@42c8 g8 g+8 g8 c8 f+8 r8 c8 c8 g8 g+8 g8 c8 f+8 r8 q7B@41c16 r16]4
+[d+8]30 d+8 $DD$18$18c ^8 [c8]16 g4 r8 c4 > r8 c4 r8 < c4 r8 > c8 r8 c4 <
+[c2 c2 < a+4 a+4 a+4 a+4 g+2 g+2] 
+g2 g2
+*1
+f+2 g2
+*1
+g2 g2 >
+*1
+c+2 c8 r4. c+2 c8 r4. c+2 c8 r4. c+8 r16 c+8 r16 c+8 c2 (90)8 
+
+c8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 e $DD$00$06f+ c8 e $DD$00$06f+ c8 r8 c8 r8 c8 r8 c8 r4 f+16 $DD$0C$18e ^8^16 $DD$00$54>d ^2
+
+;-------------------------------------------------------------------
+
+#5	;Tuvan Drone, Robopincher Lead, Bass, SE02 - Square Ghost Funk synth, Happy Plucking, Damaged Vocal Chords, Tweak-Twerk Lead
+
+o2
+
+r1
+
+/
+
+@59 v130 
+
+(90)8
+
+(!100,3) f1^1^1^1^2 (90)6 (!100,0) >
+
+@55d8 r8 d8 r1^1^8 <<
+
+@54d8 d8 r8 d8 r8 d8 r8 d8 r8 d8 r8 d8 r8 d8 > d8 < d8 r1^1 >
+
+$DE$00$10$60 y12q76@57d1. c8 f8 a8 > c+8 < a1 > a2 g+2 $DF y10 q7F <<
+
+v200
+@45g+16 r8. > @47c16 r16 < @45g+16 r16 > @47c16 r16 < @46g16 r16 @44g16 r8. @47a16 r8. @48g16 r8. @49f16 r8. e16 r2^8^16 (90)14
+@43g+16 a+16 > c16 d16 d+16 f16 g16 g+16
+g16 g+16 g16 f+16 g16 r16 > c16 r16 < c16 r16 d16 r16 d+16 r16 < b4 > c16 r16 d16 r16 < b16 r16 > c16 r16 g16 g16 g16 r16 g16 r16
+f+16 g16 f+16 f16 f+16 r16 > c8 < f+16 g16 f+16 f16 f+16 r1^8^16 >
+
+v130
+@30a16 a+16 a16 g+16 a16 r16 > d16 r16 < d16 r16 e16 r16 f16 r16 c+4 d16 r16 e16 r16 c+16 r16 d16 r16
+a8 a8 a8 a4 r8 d4 r8 < a4 r8 d4 r8 d8 r8 d4
+
+[@60g+2 a4 > d4 f4 e16 f16 e8 c4 < g4]
+a2^8 d8 f8 a8 a+4 a16 a+16 a8 g+4 a4
+*1
+a4 g+4 a4 a+4 g+4 e4 > d4 c+4
+*1 <
+a2^8 d8 f8 a8 a+4 a16 a+16 a8 g+4 a4
+g+4 f4 a4 > d4 f4 e4 g4 e4 f4. e8 d4 c4 d1^1^2^8 (90)16 r4^8 <
+
+v200
+@30f2 $DD$18$80>>d ^4^8 r8
+
+;-------------------------------------------------------------------
+
+#6	;Robopincher Lead, Mellotron Choir, SE02 - Square Ghost Funk synth, Damaged Vocal Chords
+
+v130 o3
+
+r1
+
+/
+
+(90)30
+@55r4 d8 r4. d8 (90)8 r8
+
+y8q79@62f+8 d16 r8. d16 d16 f8 c+16 r8. c+8 e16 r16 c16 r8. c16 c16 d+8 < b8 a+8 > c8
+
+$DE$00$10$60 y12q76@57f2. e4 d8 r8 c+4 < a+8 r8 > d4 $DF y10 q7F
+(90)15
+
+@30a+16 r16 g16 r16 g16 r16 g16 r16
+a16 a+16 a16 g+16 a16 r16 > d16 r16 < d16 r16 e16 r16 f16 r16 c+4 d16 r16 e16 r16 c+16 r16 d16 r16 a16 a16 a16 r16 a16 r16
+g+16 a16 g+16 g16 g+16 r16 > d8 < g+16 a16 g+16 g16 g+16 r8. (90)9
+
+@55d8 r8 d8 r8 (90)54
