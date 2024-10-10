@@ -6,6 +6,7 @@
 13 moth.json
 14 spooder.json
 15 zinger.json
+16 magikoopaboss.cfg
 
 20 kamek.cfg
 21 firebars/FireBar.json
