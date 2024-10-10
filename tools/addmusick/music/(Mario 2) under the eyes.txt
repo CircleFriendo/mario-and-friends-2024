@@ -1,0 +1,269 @@
+#amk 2
+
+#spc
+{
+#title "Under the Ice"
+#game "Mario Pinball Land"
+#comment "Happy New Year 1999!!"
+}
+
+#instruments
+{
+@21 $FF $E0 $00 $04 $00		;@30
+@10 $ED $A4 $00 $04 $00		;@31
+@5 $EE $D2 $00 $0E $00 ;@6 $EE $D2 $00 $06 $00		;@32
+@8 $FF $E0 $00 $1E $00		;@33
+@1 $BA $C2 $00 $03 $00		;@34
+@13 $CA $CA $00 $0C $00		;@35
+@3 $BE $F0 $00 $06 $00		;@36
+@6 $EE $D2 $00 $03 $00		;@37
+}
+
+$EF $FA $27 $C8
+$F1 $06 $D0 $00
+
+"V00=v000" "V01=v040" "V02=v050" "V03=v055" "V04=v060" "V05=v070" "V06=v075" "V07=v080" "V08=v085" "V09=v090" "V10=v095" "V11=v100" "V12=v105" "V13=v110" "V14=v113" "V15=v117" "V16=v120" "V17=v123" "V18=v127" "V19=v130" "V20=v133" "V21=v137" "V22=v140" "V23=v142" "V24=v145" "V25=v148" "V26=v150" "V27=v153" "V28=v155" "V29=v158" "V30=v160" "V31=v163" "V32=v167" "V33=v170" "V34=v172" "V35=v174" "V36=v176" "V37=v178" "V38=v180" "V39=v183" "V40=v185" "V41=v187" "V42=v190" "V43=v193" "V44=v195" "V45=v197" "V46=v200" "V47=v202" "V48=v204" "V49=v206" "V50=v208" "V51=v210" "V52=v212" "V53=v214" "V54=v216" "V55=v217" "V56=v220" "V57=v222" "V58=v223" "V59=v224" "V60=v226" "V61=v228" "V62=v230" "V63=v232" "V64=v234"
+
+"M=@30"
+"S=@31"
+"StrVib=$DE $18 $09 $30 v145"
+
+#0 w200 t61 v200 o4 l16 $F4 $02
+[[ (0)[Mc4Sc8Mc8 c4Sc8Mc4
+c8Sc8Mc8] c4Sc4 ]]3
+(0) c8Sc8c4	;9
+
+[[ (0) c4Sc4 ]]2	;13
+(0) c8.cSc4	;15
+
+(1)[Mc4Sc8Mc8 c4Sc8Mc4]	;16+
+c4Sc4Mc8Sc8c8	;17
+
+(0) c4Sc4
+(1) Sc8c8Mc8c8Sc8c4	;21
+
+(0) c4Sc4
+(1) Sc4Mc4Sc8Sc4	;25
+
+(0) c4Sc4
+Mc4Sc8Mc8 c4Sc8Mc8.
+c8.Sc4Mc4Sc4	;29
+
+(2)[Mc4Sc8Mc8c4Sc8Mc4]c8Sc4Mc4Sc4	;31
+(2)Mc4Sc4Mc8Sc8.c	;33
+
+Mc4Sc8Mc4Sc8c4	;34
+Mc4Sc8Mc4c8Sc8.c	;35
+(3)[Mc4Sc8Mc4c8Sc4]
+Mc4Sc8Mc4Sc8c4	;37
+
+(3)
+c4c8Mc4c8Sc4	;39
+[[Mc4Sc4]]2
+ScMc8. [[Sc8Mc8]]2 Sc4	;41
+
+(3)
+Mc8.cSc8Mc8c4Sc4	;43
+
+[[ (3)
+Mc8c8Sc8Mc8c4Sc4]]2	;45-47
+
+Mc8c4Sc4Mc4c8	;48
+
+
+;[[r2]]255
+
+
+#1 v180 o4 l16 @32
+r4 c8<ar> (100)[c8<a8 r8>c8	;2
+r8<a8 r8>c8] r8d8.r8.	;3
+<b4 r8grg2 r1	;5
+
+^4 >cr<a8> (100) r8d4r8<b2. r1.	;9+
+>c8<ar> c8<ar8.>c8	;10
+r8<a8 r8>c8 r8d4r8	;11
+<b4r8 grg2	;12
+
+r1 f4>r8crc4r4	;14
+^2 cr<b4r8>	;15
+c4. r2^8	;16
+^1
+
+^4 cr<ar> cr<a8 r8>c8	;18
+r8<a8 r8>c8 r8d8.r8.	;19
+<b4 r8grg4. ;r8
+
+(104)[@35 $F4 $01 d32e8^16 $F4 $01 ^32  d8 r8c8 r8d4.]	;21
+
+@32 r4> cr<ar> c8<a8 r8>c8	;22
+<r8a8 r8>cr8.d4r8	;23
+<b2. r8 @35 $F4 $01 d32e8^16 $F4 $01 ^32
+d8r8c8r8<a4.	;25
+
+@32 r4>>cr<ar> c8<a8 r8>c8	;26
+<r8a8 r8>c8 r8d4r8	;27
+<b4 r8gr g4^16r (104)	;29
+
+@32 f4> r8cr c2	;30
+r2cr<b4r8	;31
+>c1..^16r8.	;33
+
+@36 l8 (168)[dfadfa4r	;34
+egbegb4r
+fa>c<fa>c4r<]
+egbegb4r
+
+(168)
+gb>d<bg4	;41
+
+@32 v180 o4 l16
+r2c8<ar>c8<ar8.>c8	;42
+<r8a8r8>c8r8d4r8	;43
+<b4r8grg4.>
+$F4 $01 d32e8^16 $F4 $01 ^32  d8 r8c8 r8d4.	;45
+
+r4c8r8c4r8d8.rc8r8<b8>r8c4<br>c1	;48
+
+;[[r2]]255
+
+#2 o2 l16 y11 v220 @33
+f4^16rfr (200)[f4r8f8	;2
+r8f8 r8fr f4r4	;3
+e4r8er e4r8e8	;4
+r8e8 r8](201)[er ergag4	;5
+
+f4r8fr] (200)(202)[e8b8a8g4	;9
+
+f4r8fr f4r8f8	;10
+r8f8 r8fr b>c8.<b4	;11
+e4r8er e8.r8.er	;12
+^8e8 r8ere4r4	;13
+
+d4r8dr d4r8d8	;14
+r8d8r8dr d8.r d8e8	;15
+c4r8cr c4r8c8	;16
+<r8g8 r8g8 b8g8 b8>c8	;17
+
+f4 r8fr f4 r8f8	;18
+r8b>c8.<b4a4g8	;19
+e4 r8er e4 r8e8	;20
+r8e8.raba4g4	;21
+f4 r8fr f4 r8f8	;22
+r8f8.rfr g8.ra8.r	;23
+e4 r8er e4 r8e8	;24
+r8d8.rc8 r8d4^16r	;25
+f4 r8fr f4 r8f8	;26
+r8f8 r8f8 b>c8.< b8a8	;27
+e4 r8er e8.r8.e8	;28
+r8e8 r8er e8.r ef8.	;29
+d4 r8dr d8.r8.dr	;30
+r8d8 rfg4e8 d4	;31
+c4 r8cr c4 r8cr8.cr8.cr c8r4.	;33
+d8.r8. d8.rc8<a4	;34
+>e4r8e4..r8.
+f8.r8.f2^16r	;36
+e4r8e8r8f4e8	;37
+d4r8d4cr<a8.r>	;38
+e4r8e4..r8.
+f8r8f8r8f8e8f8.r	;40
+grg8 r8g8r8grg8r8	;41
+
+f4r8frf4r8b>c8.<b4a4>d4<g8	;43
+e4r8ere4r8e8	;44
+r8e8r8e8r8ere8r8	;45
+d4r8drd4r8df8.e8r8d8.re4.	;47
+c4r8crcrd8r8cr	;48
+]
+
+
+;[[r2]]255
+
+
+#3 @34 o4 y11 StrVib
+[ [[c1^1<b1^1]]3
+a1^1g1^1 ]2
+
+(502)[a4r8a2^8
+b4r8b2^8
+>c4r8c2^8<]
+b4r8b2^8
+
+(502)
+>d8r8d8r8d4r4
+
+o4 c1^1<b1^1
+a1^1g1
+
+;[[r2]]255
+
+#6 @34 o3 y9 StrVib
+[ [[a1^1g1^1]]3
+f1^1e1^1]2
+
+(501)[f4r8f2^8
+g4r8g2^8
+a4r8a2^8]
+g4r8g2^8
+
+(501)
+b8r8b8r8b4r4
+
+o3a1^1g1^1
+f1^1e1
+
+;[[r2]]255
+
+
+#5 @34 o3 y7 StrVib
+[ [[f1^1e1^1]]3
+d1^1c1^1]2
+
+(500)[d4r8d2^8
+e4r8e2^8
+f4r8f2^8]
+e4r8e2^8
+
+(500)
+g8r8g8r8g4r4
+
+o3f1^1e1^1
+d1^1c1
+
+;[[r2]]255
+
+
+#7 o2 y9 l16 v170 @37
+f4^16rfr (200)(201);er ergag4	;5
+
+;f4r8fr
+(200)(202);e8b8a8g4	;9
+
+;f4r8fr f4r8f8	;10
+;r8f8 r8fr b>c8.<b4	;11
+;e4r8er e8.r8.er	;12
+;^8e8 r8ere4r4	;13
+
+;d4r8dr d4r8d8	;14
+;r8d8r8dr d8.r d8e8	;15
+;c4r8cr c4r8c8	;16
+;<r8g8 r8g8 b8g8 b8>c8	;17
+
+;[[r2]]255
+
+#4 @34 o4 y13 StrVib
+[ [[e1^1d1^1]]3
+c1^1<b1^1> ]2
+
+(507)[c4r8c2^8
+d4r8d2^8
+e4r8e2^8]
+d4r8d2^8
+
+(507)
+f8r8f8r8f4r4
+
+o4e1^1d1^1
+c1^1<b1
+
+;[[r2]]255
+

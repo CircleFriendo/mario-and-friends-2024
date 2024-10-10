@@ -1,0 +1,102 @@
+#amk 2
+
+#spc
+{
+#title "Ghost Valley (Lobby)"
+#game "Super Mario Kart"
+#author "Dispace Troblex"
+}
+
+#path "C3 Troblex 2020"
+#samples
+{
+#optimized
+"synth bass 2.brr" 
+"electric piano 1.brr"
+"kick 1.brr"
+"GM Snare.brr"
+"acoustic hat close 1.brr"
+"nylonguitar.brr" 
+"synth ep 1.brr"
+}
+
+#instruments
+{
+"synth bass 2.brr" $8f $6a $FF $04 $00 
+"electric piano 1.brr" $8E $44 $B8 $08 $00;31
+@2 $CF $00 $B8 $06 $00;32
+@3 $CF $00 $B8 $06 $00;33
+
+"kick 1.brr"$BF $30 $FF $03 $00 ;KICK 34
+"GM Snare.brr" $00 $00 $FF $05 $00 ;SNARE 35
+"acoustic hat close 1.brr" $00 $00 $40 $0A $00 ;SNARE 36
+"nylonguitar.brr" $9f $6e $FF $06 $00
+"synth ep 1.brr" $8e $44 $FF $06 $F0
+}
+
+(!999)[$ed$7f$58]
+(!998)[$f4$09]
+
+t46 w200 $F4 $02
+$EF $5E $30 $D0
+$F1 $04 $30 $01
+
+#0 r2 v180 @30 q3f (!998,-1) (!999,3)/
+
+h0 o2
+[[(16)[f+8. f+16 r8 f+4 r16 q7f c+16 e16 e16 r8
+q3f f+8. f+16 r8 f+16 f+8. r8 q7f > c+16 < c+16 r8]2
+$FA $02 $FE(16)2 $FA $02 $00]]2
+
+ h-2[o2 g+8. g+16> q3f g+8 g+8 c+8. c+16 > c+8 c+8 q7f < c8.c16 r8 <f+8 q3f f+8. >f+16< f+8 f+8 f+8. f+16 r8 f+8. f+16 r8 > f+8 f+8 < f+8. f+16 r8 f+8 r16 f+16 d8d8e8
+f+8. f+16 > f+8 f+8 < b8. b16 > b8 b8 < a+8. a+16 r8 f8 f8. >f16 <f8 f8  f8. f16 > f8 f8 <f8 e8 d+8 d4 d16 d16 > d4 d16 d16 <a4 a16 a16]2
+; Channel Length (Bar):16
+
+[h0 f+8. f+16 r8 f+16 f+8. q7f < c+8 > e8 f8]4
+
+#1 r2v130 p14,28 y10 (!998,-1) (!999,3)/
+
+$FA $02 $F5 o3(9)[ [[@31g+4 r8 g+8 r8. @37 > q7b g+16 q7f g+16 r16 q79 g+16 r16<
+ q7f @31g+4 r8 g+8 r4 q79 @38> g+4 <@31]]2
+[[q7f f+4 r8 f+8 r8. @37> q79 f+16 q7f f+16 r16 q79 f+16 r16<
+ q7f @31f+4 r8 f+8 r4 q79 @38> f+4 <@31]]2]2
+
+o3[[(1)[q7f g+2>c+2c4.<f+16 r16 f+1^4 q7b@38>f+^2^4< @31q7fd8d8e8
+f+2b2a+4.f16 r16 f1f16 r16 e16 r16 d+16 r16 d2.a=69] r=3]]2
+g+1^1 @38 > q7b g+1^1
+
+#2 r2 v130 p14,28 y13 (!998,-1) (!999,3)/
+
+$FA $02 $F9 (9)2
+[[r=1 o3 (1) r=2]]2
+r=1 g+1^1 @38 > q7b g+1^=191
+
+#3 r2 v130 p14,28 y7 (!998,-1) (!999,3)/
+
+$FA $02 $FC r=1 (9)2
+[[r=1 o3 (1) r=2]]2
+r=1 g+1^1 @38 > q7b g+1^=190
+
+#4 r2 v130 p14,28 y10 (!998,-1) (!999,3)/
+
+$FA $02 $00 r=1 (9)2
+[[r=2 o3 (1) r=1]]2
+r=2 g+1^1 @38 > q7b g+1^=189
+
+#5 v180 @34 c8 @35 q79 c8 q7b c8 q7f c16 c16/
+
+[[(35)[@34 c8 @36 c16 @34 c16 @35 c8. @36 c16 c8 @34 c8 @35 c4]3
+@34 c8 @36 c16 c16 @35 c4 @34 c16 @35 c8. c8 @36 c8]]4
+
+o4 [[(3)[@34 c8 @36 c16 c16 @35 c8. @36 c16 c8 @34 c8 @35 c4
+@34 c8 @36 c16 @34 c16 @35 c8. ] @36 c16 c16 @34 c16 c8 @35 c8. @36 c16 ]]7
+(3) @34 c8. @35 q79 c8 q7b c8 q7f c16 c16
+
+[@34 c8 @36 c16 c16 @34 c8 @36 c8]6
+@34 q7d [d8]4 q7b [e16]8
+
+#6 r2 / r=1 v50
+[[ o6 $E8 $60 $64 @32 (10)[c16 q77 < c+16 > y0 q7f c+16 y20 q77 y10 < c16 q7f a16 y20 q77 c+16 > y0 q7f c+16 y10 q77 <<a16>>]7
+$E8 $60 $32 (10)
+$E8 $60 $64 @33 (10)7 $E8 $60 $32 (10) ]]4
+[r1]4

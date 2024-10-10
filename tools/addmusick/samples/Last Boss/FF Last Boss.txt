@@ -1,0 +1,147 @@
+;Yoshi's Safari - Last Boss
+;Ported by Francium
+;Requested by MKDSmaster91
+;Insert Size : 0x05AD bytes
+
+#SPC
+{
+	#author "Yasushi Tokunaga"
+	#game	"Yoshi's Safari"
+	#comment "Ported by Francium"
+	#title	"Last Boss"
+	#length "0:63"
+}
+
+#path "LastBoss"
+#samples
+{
+	#optimized
+
+	"sample_00.brr"
+	"sample_07.brr"
+	"sample_01.brr"
+	"sample_02.brr"
+	"sample_05.brr"
+	"sample_06.brr"
+	"sample_03.brr"
+	"sample_04.brr"
+	"sample_08.brr"
+}
+#instruments
+{
+	"sample_00.brr"	$8F $EB $B8 $03 $00	; @30
+	"sample_07.brr"	$F9 $E0 $B8 $03 $D0	; @31
+	"sample_01.brr"	$8F $E0 $B8 $11 $E0	; @32
+	"sample_02.brr"	$8F $E0 $B8 $01 $05	; @33
+	"sample_05.brr"	$FF $E0 $B8 $01 $47	; @34
+	"sample_06.brr"	$FF $E0 $B8 $01 $01	; @35
+	"sample_03.brr"	$8F $F8 $B8 $03 $CF	; @36
+	"sample_04.brr"	$8F $EB $B8 $03 $F0	; @37
+	"sample_08.brr"	$8F $F3 $B8 $05 $F0	; @38
+}
+
+#option smwvtable
+
+#0 t45
+@30 y11 o4 l16
+[[q7e f+ q7c f+ f+ q7a f+ q78 f+ f+
+q7e g q7c g g q7a g q78 g g
+q7e a+ q7c a+ a+ q7a a+ q78 a+ a+
+q7e a q7c a a q7a a q78 a a
+[q7e g q7a g q78 g
+q7e c+ q7a c+ q78 c+ q7e c+ q7a c+ q78 c+]2
+q7e g q7a g q78 g q7e c+ q7a c+ q78 c+]]2
+[[q7e f q7c f f q7a f q78 f f
+q7e d+ q7c d+ d+ q7a d+ q78 d+ d+
+q7e g+ q7c g+ g+ q7a g+ q78 g+ g+
+q7e g q7c g g q7a g q78 g g
+[q7e f q7a f q78 f
+< q7e b q7a b q78 b q7e b q7a b q78 b >]2
+q7e f q7a f q78 f < q7e b q7a b q78 b >]]2
+@31 [q7e c q7a c q78 c < q7e g q7a g q78 g 
+> q7e c q7a c q78 c < q7e a+ q7a a+ q78 a+
+> q7e c q7a c q78 c q7e c q7a c q78 c <
+q7e g+ q7a g+ q78 g+ q7e g+ q7a g+ q78 g+ >]2
+
+#1
+@32 q7d y10 o2
+[c g > c < c g a+]16
+[f > c < f > f < f > c <]16
+[[ [c g > c < c g a+]3 d g+ > c < d g+ > c <]]2
+
+#2
+q7e y10 o5
+[@33 a8. @34 a8. @33 a8. @34 a8. @33 a8. @34 a8.
+@33 a8. @34 a16 a16 @35 < b16]10
+
+#3
+@36 y10 o5
+[q79 c q7d c]120
+
+#4
+@30 q7d y10 o4
+[[q7d c q7b c c q79 c q77 c c
+q7d c+ q7b c+ c+ q79 c+ q77 c+ c+
+q7d e q7b e e q79 e q77 e e
+q7d d+ q7b d+ d+ q79 d+ q77 d+ d+
+[q7d c+ q79 c+ q77 c+
+< q7d g q79 g q77 g q7d g q79 g q77 g >]2
+q7d c+ q79 c+ q77 c+ < q7d g q79 g q77 g >]]2
+[[q7d c q7b c c q79 c q77 c c
+< q7d a+ q7b a+ a+ q79 a+ q77 a+ a+ >
+q7d d+ q7b d+ d+ q79 d+ q77 d+ d+
+q7d d q7b d d q79 d q77 d d
+[< q7d b q79 b q77 b
+q7d f q79 f q77 f q7d f q79 f q77 f]2
+q7d b q79 b q77 b q7d f q79 f q77 f >]]2
+@31 [< q7d g q79 g q77 g q7d d q79 d q77 d 
+q7d g q79 g q77 g q7d f q79 f q77 f
+q7d g q79 g q77 g q7d g q79 g q77 g
+q7d e q79 e q77 e q7d e q79 e q77 e >]2
+
+#5
+@37 y8 o4
+[q7b c32 q77 c32 q7b g32 q77 g32 > q7b c32 q77 c32 <
+q7b g32 q77 g32 > q7b c32 q77 c32 < q7b g32 q77 g32]16
+[q7b c32 q77 c32 q7b f32 q77 f32 > q7b c32 q77 c32 <
+q7b f32 q77 f32 > q7b c32 q77 c32 < q7b f32 q77 f32]16
+@38
+[[ [q7b c32 q77 c32 q7b g32 q77 g32 > q7b c32 q77 c32 <
+q7b g32 q77 g32 > q7b c32 q77 c32 < q7b g32 q77 g32]3
+q7b d32 q77 d32 q7b g+32 q77 g+32 > q7b c32 q77 c32 <
+q7b g+32 q77 g+32 > q7b c32 q77 c32 < q7b g+32 q77 g+32]]2
+
+#6
+@37 y12 o3
+[q7b g32 q77 g32 > q7b c32 q77 c32 q7b g32 q77 g32
+q7b c32 q77 c32 q7b g32 q77 g32 q7b c32 q77 c32 <]16
+[q7b f32 q77 f32 > q7b c32 q77 c32 q7b f32 q77 f32
+q7b c32 q77 c32 q7b f32 q77 f32 q7b c32 q77 c32 <]16
+@38
+[[ [q7b g32 q77 g32 > q7b c32 q77 c32 q7b g32 q77 g32
+q7b c32 q77 c32 q7b g32 q77 g32 q7b c32 q77 c32 <]3
+q7b g+32 q77 g+32 > q7b d32 q77 d32 q7b g+32 q77 g+32
+q7b d32 q77 d32 q7b g+32 q77 g+32 q7b d32 q77 d32]]2
+
+#7
+@30 y9 o4 r32
+[[q7b f+ q79 f+ f+ q77 f+ q76 f+ f+
+q7b g q79 g g q77 g q76 g g
+q7b a+ q79 a+ a+ q77 a+ q76 a+ a+
+q7b a q79 a a q77 a q76 a a
+[q7b g q77 g q76 g
+q7b c+ q77 c+ q76 c+ q7b c+ q77 c+ q76 c+]2
+q7b g q77 g q76 g q7b c+ q77 c+ q76 c+]]2
+[[q7b f q79 f f q77 f q76 f f
+q7b d+ q79 d+ d+ q77 d+ q76 d+ d+
+q7b g+ q79 g+ g+ q77 g+ q76 g+ g+
+q7b g q79 g g q77 g q76 g g
+[q7b f q77 f q76 f
+< q7b b q77 b q76 b q7b b q77 b q76 b >]2
+q7b f q77 f q76 f < q7b b q77 b q76 b >]]2
+@31 [q7b c q77 c q76 c < q7b g q77 g q76 g 
+> q7b c q77 c q76 c < q7b a+ q77 a+ q76 a+
+> q7b c q77 c q76 c q7b c q77 c q76 c <
+q7b g+ q77 g+ q76 g+ q7b g+ q77 g+ q76 g+ ]2
+
+#amk 2

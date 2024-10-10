@@ -1,0 +1,224 @@
+#amk 2
+
+#spc
+{
+#title "Wii U Mario Kart Stadium"
+#game "Super Mario Kart"
+}
+#path "smk"
+#samples
+{
+#optimized
+"smk_piano.brr" 
+"smk_brass.brr" 
+"smk_odguitar.brr" 
+"smk_kick2.brr" 
+"smk_powersnare.brr" 
+"smk_whistle.brr" 
+}
+#instruments
+{
+"smk_brass.brr" $9f $EA $B8 $01 $EA
+"smk_whistle.brr" $9f $6E $B8 $01 $30
+"smk_piano.brr" $9F $6E $B8 $07 $00
+"smk_odguitar.brr" $9F $62 $7F $02 $90
+"smk_odguitar.brr" $BF $CA $B8 $02 $90
+"smk_brass.brr" $BB $A2 $B8 $01 $E6
+"smk_piano.brr" $9F $6E $B8 $03 $80
+"smk_odguitar.brr" $9f $EA $B8 $01 $48
+"smk_powersnare.brr" $00 $00 $7F $07 $A0 
+"smk_kick2.brr" $00 $00 $7F $01 $38 
+"smk_powersnare.brr" $DF $10 $7F $07 $A0 
+}
+
+(!997)[$ed$7f$38]
+(!998)[$f4$09]
+
+t60 $F4 $02
+#0 w220 v140 (!998,-1) (!997,3) q6f y9
+$EF $CF $28 $28
+$F1 $05 $28 $01 @30
+o4 (9)[d+16 f32 g32 g+32 a+32 > c32 d32 d+4. d4 f4. 
+f8. e8. g2 r8]/p24,24,24 r8
+
+(0)[< g16 r16 a+16 r16 > d16 r16 f4 
+d16 r16 e4 c16 r16 d16 < g16 r16 > c4..]
+(8)[r4 < g16 r16 a+16 r16 > d16 r16 f4 
+d16 r16 d+4 g8 a+16 r16 a16 r8. f16 r8 c4^16]
+
+(0)
+
+(3)[< g16 a16 a+4 a4 g4 
+
+f4 g2^4^16 
+r4^16] (1)[g16 r16 a+16 > d16 r16 f4 d16 
+r8 e4 c16 r16 d16 < g16 r16 > c4..]
+(4)[r4 < g16 r16 a+16 > d16 r16 f4 d16 
+r8 d+4 g8 a+16 r16 a16 r8. f16 r8 c4^16]
+(1) (5)[c16 d16 d+8. d16 r8 < a+4 g8 
+a16 a+8. > c8. c16 r8 g4 f8. 
+e8 r16 c2... 
+r2^4^16] $DF @31 < g24 a24 b24 > c32 d32 e32 f32 $E8 $C0 $46[g24 a24]12
+g24 r6^24 v140 @30 (19)[g8 r8 g8. c4^16 
+> c4 < a+32 a32 g32 f32 d32 c32 < a+32 f32 r4] v160 (18)[@32 g16 a16 b16 > c16 d4 r8 < g4 > c8 
+c16 d16 e16 f16 g4. f4. 
+d+8 f8 d+16 r8 d+8 r16 d+16 r16 f16 r8.] @31 <g24 a24 b24 > c32 d32 e32 f32 g1
+(99)[r2]4
+@30
+^4 < c4 d8. d+8. 
+f16 r16 a+2^8^16 r1
+r4^16 g+8 r8 g8 r8 f16 r8 d+4^16 
+v140 r2^8 a+8. 
+b8. > c8.. < b32 a+32 a32 g32 f32 d32 r1
+r4... d+1
+d+8 
+g8 r8 g16 r16 g16 g16 r8 g4.
+
+#1 v160 (!998,-1) (!997,3) @31 y11
+o5 r1
+r4. (10)[d32 e32 f32 f+32 g24 f24 d24 c24 < b24 a24 g24 a24 a+24 b24 > c24 d24 
+d+24 e24 f24 g24 a24 b24 >]/ $DF @31 c8(99)14
+(10) (!998, 0) c8 q6b << @30 (11)[d16 r16 (!998,-1) (!997,3) f16 a+16 r16 > d4 < a+16 
+r8 > c4 < g16 r16 a+16 d16 r16 g4..]
+r4 d+16 r16 g16 a+16 r16 > d4 < a+16 
+r8 a+4 > d+8 g16 r16 f16 r8. c16 r8 < a4^16
+(11)
+g16 a16 a+8. a16 r8 g4 d+8 
+f16 g8. a8. a16 r8 > c4 c8. 
+c8 r16 < g2... 
+$DF (99)6 p24,24,24
+r16 > g4 (99)5 r4 q6f @32 < g+16 r8 g+8 r16 g+16 r16 a+16 r2... (29)[y10 @33 g8. a8. 
+b8 > c4 f4 $DD $00 $08 g c4 
+g4 f4 e4 d8. c2^16 y11
+q6b @30 < g+4 a+8. > c8. 
+d16 r16 d+2 q6f y10 @33 d8. d+8. 
+a+8 $DD $00 $08 >c < a+4 g8 g+8 a+8 > d+4 
+< d+4. q6b y11 @30 < a+8 r8 g+16 r8 g+4^16]
+r2^8 (39)[> f8. 
+f+8. g8.. f32 d32 c32 r1
+r2^16 < a+1
+a+8 
+> c8 r8 c16 r16 c16 < b8 r16 b4.]
+
+#2 @34 v140 (!998,-1) (!997,3) y5
+o4r4 d+4. d+4 d+6^24 
+e8^24 f4. g2^8 /@34 
+< (20)[g4 g8 g8 r8 f24 r6^24 f+8 g8 g6^24 r12 g8^24 r24 g8 
+g8 a8 a+8 r8 a+12 r24 a+8 r8 a+8 
+r8 b8 > c8^24 r6^24 < d6^24 r24 d8 
+f8 f+8 g4 g8 g8 r8 f24 r6^24 f+8 g8 g6^24 r12 g8^24 r24 g8 
+g8 a8 a+8 r24] (79)[a+8^24 r24 a+8 > c8 r24 c8^24 
+r24 c8 < d8 r24 d8^24 r24 d4 d8 
+d4] (20) (77)[a+8^24 r24 a+4 r24 a+8^24 
+r24 a+8 > c8 r24 c8^24 r24 c4 c8 
+c4 p24,24,24 @35] g1
+f1
+e1
+e1
+f8 f8 r8 f8 f8 f8 r8 f8
+g8 g8 r8 g8 g8 g8 r8 g8
+g+8 g+8 r8 g+8 g+8 g+8 r8 g+8
+g+8. g+8. g+8
+f2
+e1
+e1
+f1
+g2 a+4 
+g+4 g1
+f+1
+f1
+r1
+$DF >> c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r16 < b8 
+r16 a+1
+a+8 
+g8 r8 g8 g16 g16 r2
+
+#3 @34 v140  (!998,-1) (!997,3) y15
+o3
+r4 g4. g4 g6^24 
+g+8^24 a4. a2^8 
+/y15 $FA $02 $F9 @34 (20) (79) (20) (77) o3 $FA $02 $00 a1
+g+1
+g1
+g1
+a8 a8 r8 a8 a8 a8 r8 a8
+b8 b8 r8 b8 b8 b8 r8 b8
+> c8 c8 r8 c8 c8 c8 r8 c8
+c8. c8. c8
+< g+2
+g1
+g1
+a1
+> c2 d4 
+c4 < a+1
+a+1
+g+1
+r1
+$DF >> c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r8 c8 r16 < b8 
+r16 a+1
+a+8 
+r2^8 @31 y11 g16. a32 
+b32 > c32 d32 e32 f32 g32 a32 b32
+
+#5 @36 v160 q6f ;(!998,-1) (!997,3)
+o2
+r4 f4. f4 f8. 
+f+8. g4 > g8 < g4 g8 
+> g8 < g8 >/ (50)[c4 c8 c8 r8 < a+8 
+r8 b8 > c4 c8. r8. c8. 
+r16 d8 d+4 d+8 d+8 r8 d+8 
+r8 e8 f4 f8 g4 < g8 
+a8 a+8 > c4 c8 c8 r8 < a+8 
+r8 b8 > c4 c8. r8. c8 
+c8 d8 d+8.] d+16 d+8 d+8 f8. f8. 
+f8 g8. < g8. g4 > g8 
+< g8 > g8 (50) d+8. d+4 d+4 
+d+8 f8. f8. g4 g8. 
+g8. f2.. 
+> c8 g8. f8. a+4 g+8 
+g8 f8 e4. < g4 a16 b16 
+> c16 c+16 d16 d+16 e8. f8. g8 > c4 
+< e32 d32 c32 < b32 a32 g32 f32 e32 d4. d4. 
+> d8 d+8 e8 e12 r8^24 < e4 > e8 
+e4 g8. f8. d+8 d8 c8 
+< a+8 g+8 g+8. g+8. g+8 a+8 a16 g+16 
+g4 c4. g4 c8 
+d8 d+8 e8. e16 r8 e4 e4 
+r8 < f4. f4. 
+g4 g+4. a+8 r8 a+8 
+g+4 g8 g4 g4 g8. 
+r16 g8 f+4. > f+4 < f+8. 
+r16 f+8 f4. > f4 < f8 
+g8 g+8 g+8. g+8. g+8 a+8. r4.. > g8 > c8 e8 f+8. d8. 
+d16 d+16 e4 d8 < g8 > c8 r16 < b8 
+r16 a+4. c+8 f8 a+8 g+16 g16 
+f+16 f16 e16 d+16 g8. > g8. < g8 < g8 g8 
+g4
+
+#4 o4 v160
+@38 e16 e16 @40 < e24 e24 e24>
+@39 e4 @38 e8 @39 e4 @38 e8. @39 e8. e8. @38 e8. @39 e4. @38 e16 e16 <@40 e8>/
+[@39 e4 @38 e4. @39 e8 @38 e4]6
+@39 e4 @38 e4 e8 @39 e8 @38 e8 @39 e8
+@38 e8 @39 e4 e4 e8 @38 e16 e16 @39 e8
+[@39 e4 @38 e4 @39 e4 @38 e4]7
+@39 e8. e8. e4 e8 @38 e16 e16 @39 e8
+[@39 e4 @38 e8 @39 e4 e8 @38 e4]7
+@38 e8. @39 e8. e8 @38 e16 e16 <@40 e16 e16> @38 e16 e16 e16 e16
+[@39 e4 @38 e4 @39 e8 e8 @38 e4]7
+@39 e16 @38 e16 e16 @39 e16 @38 e16 e16 @39 e16 @38 e16 @39 e8 @38 e16 e16 e8 e16 e16
+e4 e4 e8 @39 e8 @38 e8 @39 e8 @38 e4 e8 @39 e8 @38 e8. e8. @39 e8 r4 @38 e4 e8 @39 e8e8 < @40 e16 e16 > @38 e8 < @40 e16 e16 > @38 e8. @39 e8. e8 e4
+
+#6 o4 v140 @37 y11 (!998,-1) (!997,3)
+(9)/r8 p24,24,24
+
+(0)
+(8)
+
+(0)
+
+(3) (1)
+(4)
+(1) (5) r1.
+$DF (19) r12 v100 (18) r2. (29)
+r4^6^8 v140 @37 (39)

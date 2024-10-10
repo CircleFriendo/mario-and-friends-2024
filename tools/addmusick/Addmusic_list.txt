@@ -1,8 +1,8 @@
 Globals:
 01  originals/01 Miss.txt
 02  originals/02 Game Over.txt
-03  originals/03 Boss Clear.txt
-04  originals/04 Stage Clear.txt
+03  Big Boss Clear.txt
+04  Goal.txt
 05  originals/05 Starman.txt
 06  originals/06 P-switch.txt
 07  originals/07 Keyhole.txt
@@ -42,3 +42,25 @@ Locals:
 26  originals/38 Staff Roll.txt
 27  originals/39 The Yoshis Are Home.txt
 28  originals/40 Cast List.txt
+29	(Mario 1) Ghost Valley I (Workout).txt
+2A	(Mario 2) under the eyes.txt
+2B	(Luigi 1) Wario Land 4 - Toy Block Tower.txt
+2C	(Luigi 2) PLUMBING TO THE X-TREME!!!.txt
+2D	(Peach 1) Bopping on the Clouds.txt
+2E	(Peach 2) ML-PIT_yoshimountain.txt
+2F	(Wario 1) Mario Kart Stadium (SMK Remix).txt
+30	(Wario 2) Super Smash Bros. Brawl - WarioWare Inc.txt
+31  (Daisy 1) Let's-A-Go.txt
+32	(Daisy 2) VLDC7 - Fire.txt
+33	(Castles) VLDC8 - Castle 2.txt
+34	(Waluigi 1) ToadFactory.txt
+35	(Waluigi 2) And my Name's Booster.txt
+36	(Ghost House) dreamy somnom labyrinth.txt
+37	(Kamek 1) Gritzy Desert.txt
+38	(Kamek 2) Anthem Of Greed.txt
+39	(Kamek 3) Super Mario Galaxy - Bowser's Galaxy Reactor.txt
+3A	(Kamek Boss) TheFangedFastener.txt
+3B	(Castles) VLDC8 - Castle 2.txt
+3C	(Castle Bosses) VLDC8 - Boss.txt
+3D	(Main World) Ghost Valley (Lobby).txt
+3E	(Kamek World) bossblitz.txt

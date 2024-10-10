@@ -1,0 +1,166 @@
+#amk 2
+
+#spc
+{
+	#title "WarioWare Inc."
+	#game "Super Smash Bros. Brawl"
+	#author "Keigo Ozaki"
+	#comment "Ported by Dippy"
+}
+
+#path "wariowareinc"
+
+#samples
+{
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../EMPTY.brr"								;@7 Removed; Incompatible w/ Bonus End
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../EMPTY.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../optimized/10 SMW @12.brr"
+	"../EMPTY.brr"
+	"../EMPTY.brr"								;@15 Removed; Incompatible w/ Yoshis
+	"../EMPTY.brr"								;Thunder Removed; Incompatible w/ Thunder & Blarggs
+	"kick.brr" 				
+	"clap.brr" 				
+	"synth bass.brr"			
+	"glass pad.brr"			
+	"XG_sawtooth.brr" 		
+	"high strings oct.brr"	
+	"shaker.brr"	
+	"acoustic hat open.brr"	
+	"power chord.brr"
+	"piano.brr"
+	"acoustic cymb.brr"
+	"snare.brr"
+	"deep bass.brr"
+}
+
+#instruments
+{
+	"kick.brr" 				$FF $E0 $B8 $04 $A0 	;@30
+	"clap.brr" 				$FF $E0 $B8 $04 $A0 	;@31
+	"synth bass.brr"			$BF $90 $B8 $01 $00 	;@32
+	"glass pad.brr"			$FF $E0 $B8 $06 $00 	;@33
+	"XG_sawtooth.brr" 		$FF $E0 $B8 $02 $9F 	;@34
+	"high strings oct.brr"	$FF $E0 $B8 $05 $00 	;@35
+	"shaker.brr"				$FF $E0 $B8 $07 $A8 	;@36
+	"acoustic hat open.brr"	$BF $12 $B8 $06 $80 	;@37
+	"power chord.brr"			$AF $A9 $B8 $04 $00	;@38
+	"piano.brr"				$FF $F1 $B8 $04 $00	;@39
+	"acoustic cymb.brr"		$8F $11 $00 $05 $00	;@40
+	"snare.brr"				$FF $F6 $00 $06 $80	;@41
+	"deep bass.brr"			$FF $EE $00 $01 $80	;@42
+}
+
+w177 t54 $F4 $02
+
+$EF $FE $25 $25
+$F1 $05 $4A $01
+
+;Remote Commands
+(!100)[$F4 $09]
+(!101)[$FA $01 $B8]
+
+;Macros
+"K=@30 c"
+"C=@31 c"
+"O=@37 c"
+"S=@41 c"
+"SH=@36 c"
+"EC=$F4 $03"
+"L=$F4 $01"
+
+"G_OFF=(!100,0)"
+"G_B8=(!100,-1) (!101,3)"
+
+
+#0 v185 o4 ;Percussion
+(1)[y10 K4 EC y11 C4 EC]8
+/ (1)35 (4)[y10 K4 EC y11 C8 EC y10 K8] (1)3 (4)
+v185 K8. K16  EC v230 S4 v185 EC
+[v185 K4 EC v230 S4 v185 EC]27
+(1)8
+
+#1 @32 v192 o4 ;Bass
+(11)[a4e8.e16g8g+8r8d4<b4>d4<b8>d8d+8
+a4e8.e16g8g+8g8d4<b4>d4<b8>d8d+8]1
+/ (11)4
+a8.a16r1^4g8.g16r8d8 a8.a16r1^4g8.g16r16d16r16d16
+@42 v180 o3 (9)[ [[a8a4a8]]2 [[g8g4g8]]2]3 > d1 < g8g4g8g8g8g+4
+(9)2 > d1< g2g+2 @32 v192
+(11)
+
+#2 ;Lead
+[r1]4 / @34 o4 v165 G_B8 p8,25,52 
+r4 b2^8>c+8r8<a2..r4b2^8>c+8r8d8r8 d4 $DD$00$0C e d16c+16d8c+16c16
+r4 p0,0 o3 @35 (3)[b2^8>c+8r8<a2..r4b2^8>c+8r8d8r8 e4 d16c+16d8c+16c16]
+r4 v138 @34 p8,25,40 $FA $02 $18 (3)
+$FA $02 $00 y11 @39 v155 p0,0 [g2..a1^8]2
+@34 o5 v145 y10 p8,25,52 
+[r1]2 r8 a16r16a16r8.g8.a16r2^8 < v130 b2^8
+v140 > c2^8 c8r8c4<b16r16b4b16>c16r16c16r8d16r16 
+(6)[e4c4r8c16r16c8.<b16>c8<b16r16b2.>
+c2^8 c8r8c4<b16r16b4>d8.e16r4d1c2]<b2 (6)>d2
+[r1]4
+
+#3 @33 o4 v125 y05 p8,20 
+[r1]3 $ED $F7 $E4 $DC $80 $0B a1
+/ y11 $F4 $09 G_OFF [g2..a1^8]8
+y09 L r1. @34 v122 b16>c16<r16b16r8a16r16 
+e2 $DD$00$60 g g2 $DD$00$60 b b2 $DD$00$60 > e e2 $DD$00$60 a L
+G_B8 o4 a2^8 a8r8a4g16r16g4g16a16r16a16r8b16r16 
+(8)[>c4<a4r8a16r16a8.g16a8g16r16g2.
+a2^8 a8r8a4g16r16g4b8.>c16r4<a1g2]g2(8)g+2
+@33 o4 v125 y05 p8,20 [r1]3 $ED $F7 $E4 $DC $80 $0B a1
+
+#4 @33 o4 v120 y05 p8,20 
+[r1]3 $ED $F7 $E4 $DC $80 $0B  f+1
+/ y11 $F4 $09 [e2..f+1^8]8
+y09 L r1. @34 g16a16r16g16r8f16r16 L
+r8 v130 o5 e16r16e16r8.d8.e16r2^8 < g2^8
+r1. @32 o4 v180 g8.g16r8d16d16a8.a16r16r2^16d8g8.g16r8d16d16g8.g16d8.g16
+(10)[a8.a16r8d16d16g8.a16r8e16r16d8r8g8r8d8r16g16 g24e24d24e24r16^48]
+d4.f4.a4g8e4.g4g+4
+a8.a16r8e8g8.e8.d8g8.g16r8d16d16g8.g16d8.g16(10)
+f1 $E3$BF$28 g2g+2 $E2$36
+@33 o4 v120 y05 p8,20 [r1]3 $ED $F7 $E4 $DC $80 $0B f+1
+
+#5 @33 o4 v120 y05 p8,20 
+[r1]3 $ED $F7 $E4 $DC $80 $0B d1
+/ y11 @38 $F4 $09 v125 p8,25 [a2..d1^8]8
+[r1]4 v150
+(7)[ [[e8e16r8.e8]]2 [[d8d16r8.d8]]2 ]3  a1 d8d16r8.d8 d8d8e4
+(7)2a1g2g+2 <
+[a2..>d1^8]2
+
+#6 v185 o4 y08 ;Hats
+[r1]3 r2. O4 
+/ EC v130 (5)[q5f SH8 q59 SH8]64
+EC @40 v225 c1^1 [r1]2 EC
+v130 (5)56
+[r1]3 r2. EC v185 q7f O4
+
+#7 @39 o4 v155 y11
+[r1]4 / @39 o4 v155 y11 r1 r2 d16e8g8e16g8
+[r1]2 y10 v165 @34 > p8,25,52 (2)[c+16<b16a16g16e16f+16g16r16]
+y11 @39 v155 p0,0 r1d16e8g8e16g8
+[r1]2 y10 v165 @35 $FA $02 $F4 (2)
+$FA $02 $00 y11 @39 v155 r1d16e8g8e16g8
+[r1]2 y10 v138 @34 p8,25,40 $FA $02 $0C (2)
+y11 @39 v155 p0,0 $FA $02 $00 r4. d2^8 d16e8g8e16g8e2..d1^8
+[r1]4
+@40 o4 y08 v180 c1^1r1^1
+[r1]10
+c1^1c1^1

@@ -1,0 +1,397 @@
+#amk 2
+
+#SPC
+{
+	#title "REMIX - Boss"
+	#game "VLDC8"
+	#author "Wakana"
+}
+
+#path "VLDC8 - Boss"
+
+#samples
+{
+        #optimized
+        "@8.brr"
+	"XG_crash.brr"
+	"accordianRPG.brr"
+        "Strings.brr"
+        "Trumpet.brr"
+	"hi-hat.brr"
+        "altKick.brr"
+	"sidestick.brr"
+        "Piano3.brr"
+	"powerSET.brr"
+}
+
+#instruments
+{
+        "@8.brr" $FF $EC $B8 $04 $82       ;@30 acoustic bass
+	"XG_crash.brr" $FE $F0 $CF $0A $92; @31 CYMBAL
+	"accordianRPG.brr" $F8 $EA $00 $05 $11 ; @32
+	"Strings.brr" $FC $E0 $C0 $02 $10; @33 Fast Strings
+	"XG_crash.brr" $F3 $F0 $CF $0A $92; @34 incoming CYMBAL
+	"Trumpet.brr" $F9 $C5 $A0 $04 $00 ;@35
+	"hi-hat.brr" $FA $FA $C0 $09 $00 ;  @36 HIHAT
+	"powerSET.brr" $FF $F0 $E0 $09 $00    ;  @37
+	@2 $FF $EE $00 $03 $00 ; @38 huehue
+	"Trumpet.brr" $FF $A5 $A0 $04 $00 ;@39
+	"sidestick.brr" $FF $F8 $B8 $0C $07;@40 SIDESTICK
+        "altKick.brr" $00 $00 $6D $0F $00    ;   a @41  v255
+        "Piano3.brr" $FF $F0 $C0 $05 $1C ;@42
+	"Strings.brr" $F7 $E0 $C0 $02 $10; @43 Softy Strings
+}
+
+;;;ECHO;;;;;;;;
+$EF $FF $30 $30
+$F1 $03 $A0 $01
+
+
+$f4 $02
+
+#0 w225 t50
+
+@35 v130 y10 o5  a+16 @39 g+6...
+@35 f16 @39 d+8.  < 
+@35 a+16 @39 g+4.. 
+/
+t53
+
+;STRING1
+$e5 $00 $08 $30
+o5 y12
+(001)[@33 v100 c8 v80 c16 v100 c8 v80 c16 v30 c8
+v100 d+8 v80 d+16 v100 d+8 v80 d+16 v100 c+8
+v100 c8 v80 c16 v100 c8 v80 c16 v30 c8
+v100 d+8 v80 d+16 v95 @32 $f4 $01 d+8 c+16d+16c+16 $f4 $01]2
+$fa $02 $05
+(001)
+$fa $02 $00
+(001)
+
+(002)[@33 v100 g16 g16 v80 g16 v100 g16 v80 g16 v100 g16 v80 g16 v100 g16 v80 g16 v50 g8 v100 g8 f+16f8]
+$fa $02 $FD (002)
+$fa $02 $00
+
+(001)3
+
+t54
+$fa $02 $05
+(001)
+$fa $02 $00
+(001)
+(002)
+$fa $02 $FD
+(002)
+$fa $02 $00
+
+(001)
+
+@43 o4 v100
+[c1<a+1g+1g1]4
+t53
+
+(001)2
+$fa $02 $05
+(001)
+$fa $02 $00
+(001)
+(002)
+$fa $02 $FD
+(002)
+$fa $02 $00
+
+(001)
+
+#1
+
+
+@35 v100 y12 o5  f16 @39 d+6... @35 <b16 @39 a+8. @35  f16 @39 d+4..
+/
+;STRING2
+$e5 $00 $08 $30
+@33 o4 y8
+(100)[v100 g8 v80 g16 v100 g8 v80 g16 v30 g8
+v100 a+8 v80 a+16 v100 a+8 v80 a+16 v100 g+8
+v100 g8 v80 g16 v100 g8 v80 g16 v30 g8
+v100 a+8 v80 a+16 v100 a+8 v80 a+16 v30 a+8]2
+$fa $02 $05
+(100)
+$fa $02 $00
+(100)
+>
+(101)[@33 v100 d16 d16 v80 d16 v100 d16 v80 d16 v100 d16 v80 d16 v100 d16 v80 d16 v50 d8 v100 d8 c+16c8]
+$fa $02 $FD (101)
+$fa $02 $00
+
+(100)3
+$fa $02 $05
+(100)
+$fa $02 $00
+(100)
+(101)
+$fa $02 $FD
+(101)
+$fa $02 $00
+
+(100)
+
+@43 o3 v100
+[g1f1d+1d1]4
+
+@33
+(100)2
+$fa $02 $05
+(100)
+$fa $02 $00
+(100)
+(101)
+$fa $02 $FD
+(101)
+$fa $02 $00
+
+(100)
+
+
+#2
+
+@35 v100 y8 o5 c16< @39 a+6... @35 a16 @39 f8. @35  c16< @39 a+4..
+/
+;STRING3
+$e5 $00 $08 $30
+@33 o4 y10
+(200)[v100 d8 v80 d16 v100 d8 v80 d16 v30 d8
+v100 f8 v80 f16 v100 f8 v80 f16 v100 d+8
+v100 d8 v80 d16 v100 d8 v80 d16 v30 d8
+v100 f8 v80 f16 v100 f8 v80 f16 v30 f8]2
+$fa $02 $05
+(200)
+$fa $02 $00
+(200)
+
+(201)[@33 v100 g16 g16 v80 g16 v100 g16 v80 g16 v100 g16 v80 g16 v100 g16 v80 g16 v50 g8] v100 a+8 g+16a+16g+16
+(201) v100 g+8. v80 g+8
+
+(200)3
+$fa $02 $05
+(200)
+$fa $02 $00
+(200)
+(201) v100 a+8 g+16a+16g+16
+(201) v100 g+8. v80 g+8
+
+(200)
+
+@43 o3 v110
+[d+1c1<a+1b1]4
+
+@33
+(200)2
+$fa $02 $05
+(200)
+$fa $02 $00
+(200)
+(201) >>v100 a+8 g+16a+16g+16
+(201) v100 g+8. v80 g+8
+
+
+(200)
+
+#3
+@35 v90 y17 o4 g+16 @39 f+6... @35 g16 @39 c+8. @35 < g+16 @39 f+4..
+/
+$e5 $00 $00 $00
+$DF
+
+@35 o5
+r2^8 v100 y11 c8d+8f8 d8..d+32d2d4d32 $e8 $8f $30 d2.^16^32 v100 d32c+16 c32d16d+16  r16 a+2.
+v50 a+8>
+
+
+@32 v135 l16 y8
+(300)[dd+dd+dc<bg+f+d<ag+f+fd+dfg+b r8 fg+b>dr8< b>d+fg+r8 a8g+8f+fd+<ba+g+d+fg>cd+dcd8ad+c<b>c<ba+g+d+fga+ga+>c<a+>cd+cd+f    d+fgfga+ b8a+ag+g8gfc+<bgf>c+<b8 b>cdf8fd+dc<f8f8d+ $e8 $8F $60 f1 $DD $00 $C0 $8C]
+r8
+@31 v140 y13 o3 c2
+>
+;old @38
+@42 v160 y8 f8.g+8.d+8.a+8.g+8.b2^16f8 g+aa+ba+a f8cg+8a+8a+ba+ba+g+f8cd+f4..
+
+r16
+@35 v130 $e5 $00 $0A $20 $de $10 $08 $40 (300) r8
+$df
+t53
+@42 o4 v180 ;PIANO
+(301)[c4^16 cdd+4..c8f8.d+fd+d2^8 d+8.<g+8.>d8.<g+8.>d8c8<b2. b4>
+c4^16 cdd+4..c8f8.d+fd+d2^8 d+4. c8f8d+16d8c8.  d2.<b4>]
+
+@35 v130 $e5 $00 $0A $20 $de $10 $08 $40
+(301) c1^1 r1^1
+$df
+@42 o4 v180 ;PIANO
+r16 $fa $02 $F4
+(300) $fa $02 $00 r8
+
+
+
+"POW=@37 y12 v140"
+"BUM=@41 y10 v160"
+"STK=@40 y8 v100"
+
+#4
+;PERCUSS
+BUM v150 y10 o3 c16 POW c6... 
+BUM c16 POW c8.
+BUM c16 POW c4 STK c16 v100 c32 v90 c32 v80 c32 v70 c32
+/
+
+(400)[BUMc16 v140 c16 v100 c16 STKc16 BUMc8 v130 c16 v100 c16]16
+
+l16
+
+(401)[POW cc8c8cccc8.c8cc8]2
+
+(400)20
+
+(401)2
+
+(400)3  POW cc8c8ccc
+
+
+[ [[BUMc16 v140 c16 v100 c16 v160c16]]6 BUMc16 STKc8 BUMc16 STKc8 BUM v140 c16 v100 c16]3
+
+  [BUMc16 v140 c16 v100 c16 v160c16]6 BUMc16 POWc8 BUMc16 POWc16c16c16c16
+
+
+[ [[BUMc16 v140 c16POWc16BUM v140 c16]]14 BUMc16 POWc8 BUMc16 POWc16c16c16c16]2
+
+@31 v130 y12 o3 c1^1^1^2 @34 c2
+
+[BUM c4]15 POWc16c16c16c16
+
+(401)2 (400)4
+
+#5
+;BASS
+
+
+@30 v140 o4 r16 g+6... ^16 d+8. < ^16 g+4..
+
+$f4 $03
+/ v155
+o4
+(500)[c8.g8.>c8< c+8.g+8.>c+8]4
+$fa $02 $05
+(500)2
+$fa $02 $00
+(500)2
+
+l16
+<
+(501)[ee [[v90 e v150 e]]3 v90 e r8 v150 e8d+d8]
+$fa $02 $fd (501) $fa $02 $00
+
+(500)6
+$fa $02 $05
+(500)2
+$fa $02 $00
+(500)2
+
+(501)
+$fa $02 $fd (501) $fa $02 $00
+
+(500)2
+
+
+$f4 $03
+$e5 $00 $0A $20 $de $10 $08 $40
+@38 o5 v100 y13
+[c4^16 cdd+4..c8f8.d+fd+d2^8] d+8.<g+8.>d8.<g+8.>d8c8<b2. b4>
+* d+4. c8f8d+16d8c8.  d2.<b4>
+$e5 $00 $00 $00 $df
+$f4 $03
+
+
+@30 v155 o3 y10
+t54
+[ [[gg>gg]]4 [[<ff>ff<]]4 [[d+d+>d+d+<]]4 [[dd>dd<]]4 ]2
+
+
+(500)4
+$fa $02 $05
+(500)2
+$fa $02 $00
+(500)2
+
+
+(501)
+$fa $02 $fd
+(501)
+$fa $02 $00
+(500)2
+
+
+#6
+;CYMBALS
+@31 v130 y12 o3 r16 c6... ^16 y8 <b8. ^16 y12 >c4..
+/
+@36 (600)[y12 v110 c16 v80 c16 y7 v95 d16 y9 v70 c16]32
+
+(601)[@31 v130 y12 c4. < y8 b4.> y12 c4  c2 < y8 b4 > y12 c4]
+
+@36 (600)40
+
+(601)
+
+
+@36 (600)6
+
+@31 v130 y12 o3 c4 y8 c+4
+
+@36 (600)64
+
+[r1]4
+@31 v130 y12 o3 c1 [r1]3
+
+(601)
+@36 (600)8
+
+
+#7
+
+
+@35 v80 o4 y3 d16 @39 c6...
+@35 d+16< @39 g8. 
+@35 d16 @39 c4..
+/
+o3
+@31 v130 y12 c1^1^2^8
+
+@32 > y7 v90  f8^4 $DD $00 $60 $c1 ^1 
+
+
+@32 v90 l16 y13 r8 >>
+(700)[dd+dd+dc<bg+f+d<ag+f+fd+dfg+b r8 fg+b>dr8< b>d+fg+r8 a8g+8f+fd+<ba+g+d+fg>cd+dcd8ad+c<b>c<ba+g+d+fga+ga+>c<a+>cd+cd+f    d+fgfga+ b8a+ag+g8gfc+<bgf>c+<b8 b>cdf8fd+dc<f8f8d+ $e8 $FF $60 f1 $DD $00 $C0 $8C]
+
+r2^8
+;old @38
+@42 y14 v120 f8.g+8.d+8.a+8.g+8.b2^16f8 g+aa+ba+a f8cg+8a+8a+ba+ba+g+f8cd+f4..
+
+r16
+@35 v80 y13 $e5 $00 $0A $20 $de $10 $08 $40 (700) r16
+
+$e5 $00 $00 $00 $DF
+@42 o4 v120 y14 r16 ;PIANO
+[c4^16 cdd+4..c8f8.d+fd+d2^8] d+8.<g+8.>d8.<g+8.>d8c8<b2. b4>
+* d+4. c8f8d+16d8c8.  d2.<b8.>
+
+$e5 $00 $0A $20 $de $10 $08 $40
+@35 v100 y13 r16
+(301) c1^1 r2^8
+$e5 $00 $00 $00
+$DF
+
+@32  y7 v90  f8^4 $DD $00 $60 $c1 ^1 
+
+r16 @42 o5 v120 y14
+dd+dd+dc<bg+f+d<ag+f+fd+dfg+b r8 fg+b>dr8< b>d+fg+r8 a8g+8f+fd+<ba+g+d+fg>cd+dcd8ad+c<b>c<ba+g+d+fga+ga+>c<a+>cd+cd+f    d+fgfga+ b8a+ag+g8gfc+<bgf>c+<b8 b>cdf8fd+dc<f8f8d+ $e8 $FF $60 f1
+r16

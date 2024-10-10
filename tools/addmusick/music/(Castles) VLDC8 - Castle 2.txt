@@ -1,0 +1,527 @@
+#amk 2
+
+#SPC
+{
+	#title "REMIX - Castle 2"
+	#game "VLDC8"
+	#author "Wakana"
+}
+
+#path "VLDC8 - Castle 2"
+
+#samples
+{
+        #optimized
+        "@8.brr"
+        "Cymbals.brr"
+	"organ.brr"
+        "Strings.brr"
+	"timpani.brr"
+        "Trumpet.brr"
+	"powerSET.brr"
+        "bell.brr"
+	"DKC_P.E./20.brr"
+	"DKC_P.E./21.brr"
+	"DKC_P.E./22.brr"
+	"DKC_P.E./23.brr"
+	"DKC_P.E./24.brr"
+	"DKC_P.E./25.brr"
+	"DKC_P.E./26.brr"
+	"DKC_P.E./27.brr"
+	"DKC_P.E./28.brr"
+	"DKC_P.E./29.brr"
+	"DKC_P.E./2A.brr"
+	"DKC_P.E./2B.brr"
+	"DKC_P.E./2C.brr"
+	"DKC_P.E./2D.brr"
+	"DKC_P.E./2E.brr"
+	"DKC_P.E./2F.brr"
+	"DKC_P.E./30.brr"
+	"DKC_P.E./31.brr"
+	"DKC_P.E./32.brr"
+	"DKC_P.E./33.brr"
+	"DKC_P.E./34.brr"
+	"DKC_P.E./35.brr"
+	"DKC_P.E./36.brr"
+	"DKC_P.E./37.brr"
+	"DKC_P.E./38.brr"
+	"DKC_P.E./39.brr"
+	"DKC_P.E./3A.brr"
+	"DKC_P.E./3B.brr"
+	"DKC_P.E./3C.brr"
+	"DKC_P.E./3D.brr"
+	"DKC_P.E./3E.brr"
+	"DKC_P.E./3F.brr"
+}
+
+#instruments
+{
+        "@8.brr" $FF $EC $B8 $04 $82       ;@30 acoustic bass
+        "Cymbals.brr" $FE $F1 $CF $09 $20; @31
+        "organ.brr" $AA $80 $C0 $02 $F5 ;@32
+	"Strings.brr" $F8 $C0 $C0 $02 $10; @33 $EE $B0 y13  y13 $ED $81 $00 $EE $B0/E0
+	"timpani.brr" $FF $EF $00 $06 $00; @34
+	"Trumpet.brr" $F9 $A5 $A0 $04 $00 ;@35
+        "bell.brr" $FF $F3 $CF $04 $30; @36
+	"powerSET.brr" $FF $EF $00 $09 $00 ;@37
+	@17 $FF $E0 $00 $05 $00; @38
+	"DKC_P.E./20.brr" $8F $E0 $00 $04 $00; @39
+	"DKC_P.E./21.brr" $8F $E0 $00 $04 $00; @40
+	"DKC_P.E./22.brr" $8F $E0 $00 $04 $00; @41
+	"DKC_P.E./23.brr" $8F $E0 $00 $04 $00; @42
+	"DKC_P.E./24.brr" $8F $E0 $00 $04 $00; @43
+	"DKC_P.E./25.brr" $8F $E0 $00 $04 $00; @44
+	"DKC_P.E./26.brr" $8F $E0 $00 $04 $00; @45
+	"DKC_P.E./27.brr" $8F $E0 $00 $04 $00; @46
+	"DKC_P.E./28.brr" $8F $E0 $00 $04 $00; @47
+	"DKC_P.E./29.brr" $8F $E0 $00 $04 $00; @48
+	"DKC_P.E./2A.brr" $8F $E0 $00 $04 $00; @49
+	"DKC_P.E./2B.brr" $8F $E0 $00 $04 $00; @50
+	"DKC_P.E./2C.brr" $8F $E0 $00 $04 $00; @51
+	"DKC_P.E./2D.brr" $8F $E0 $00 $04 $00; @52
+	"DKC_P.E./2E.brr" $8F $E0 $00 $04 $00; @53
+	"DKC_P.E./2F.brr" $8F $E0 $00 $04 $00; @54
+	"DKC_P.E./30.brr" $8F $E0 $00 $04 $00; @55
+	"DKC_P.E./31.brr" $8F $E0 $00 $04 $00; @56
+	"DKC_P.E./32.brr" $8F $E0 $00 $04 $00; @57
+	"DKC_P.E./33.brr" $8F $E0 $00 $04 $00; @58
+	"DKC_P.E./34.brr" $8F $E0 $00 $04 $00; @59
+	"DKC_P.E./35.brr" $8F $E0 $00 $04 $00; @60
+	"DKC_P.E./36.brr" $8F $E0 $00 $04 $00; @61
+	"DKC_P.E./37.brr" $8F $E0 $00 $04 $00; @62
+	"DKC_P.E./38.brr" $8F $E0 $00 $04 $00; @63
+	"DKC_P.E./39.brr" $8F $E0 $00 $04 $00; @64
+	"DKC_P.E./3A.brr" $8F $E0 $00 $04 $00; @65
+	"DKC_P.E./3B.brr" $8F $E0 $00 $04 $00; @66
+	"DKC_P.E./3C.brr" $8F $E0 $00 $04 $00; @67
+	"DKC_P.E./3D.brr" $8F $E0 $00 $04 $00; @68
+	"DKC_P.E./3E.brr" $8F $E0 $00 $04 $00; @69
+	"DKC_P.E./3F.brr" $8F $E0 $00 $04 $00; @70
+        "organ.brr" $AF $80 $C0 $02 $F5 ;@71
+	@2 $8F $69 $00 $03 $00; @72
+	@9 $8F $60 $00 $05 $5F; @73
+	"Strings.brr" $8F $C0 $C0 $02 $10;@74
+	@0 $87 $88 $00 $03 $00; @75
+	@0 $89 $88 $00 $03 $00; @76
+}
+
+$f4 $02
+
+$EF $FF $44 $44 
+$F1 $04 $C5 $01
+
+#0 t43 w145
+
+@32 o1 v180 y18
+g2>>>> y6 c+2.
+
+y11
+[ v180 $e8 $ef $50 [[f16]]8 $e8 $df $B4 [[f16]]8 v180 $e8 $ef $50 [[g16]]8 $e8 $df $b4 [[g16]]8 v180 $e8 $ef $50 [[g+16]]8 $e8 $df $b4 [[g+16]]8 v180 $e8 $ef $50 [[g16]]8 $e8 $df $b4 [[g16]]8 ]4
+
+v180 $e8 $ef $50 [[f16]]8 $e8 $df $B4 [[f16]]4
+
+$e8 $01 $C8
+
+v220
+[f4g4r2]2
+f4g4g+4f+4 $e8 $ff $00 g1..
+
+y10
+$e8 $01 $A0
+l32
+r16fv90 f v130 d v90f<v130 b>v90 d<v130 g+v90 bv130 gv90 g+v130 fv90 gv130 d v90f< v130b> v90d< v130g+v90 b v130g v90g+v130 fv90 g t48
+/
+;Satanic Piano
+l16 @71 o4 v150
+$e5 $01 $08 $39
+[{ 
+
+y1  $dc $ff $13 $e8 $80 $C8 c<g>cd+cd+gd+g>c<g>c  d+ $e8 $70 $96 cd+c<g>c<gd+gd+cd+
+y19 $dc $ff $01  $e8 $80 $C8 c<f+>cd+cd+f+d+f+>c<f+>c  d+ $e8 $70 $96 cd+c<f+>c<f+d+f+d+cd+
+y1  $dc $ff $13  $e8 $80 $C8 c<g+>cfcfg+fg+>c<g+>cf  c $e8 $70 $96 fc<g+>c<g+fg+fcf
+y19 $dc $ff $01  $e8 $80 $C8 d<b>dfdfbfb>d<b>d  fdf $e8 $70 $96 d<b>d<bfbfdf
+
+}]5
+
+{
+y1 $dc $ff $13 $e8 $80 $C8   (001)[c<g>cd+cd+gd+g>c<g>cd+   c $e8 $70 $96  d+c<g>c<gd+gd+cd+]
+y19 $dc $ff $01  $e8 $80 $C8 (002)[d<b>dfdfbfb>d<b>df  d $e8 $70 $96 fd<b>d<bfbfdf]
+y1 $dc $ff $13 $e8 $80 $C8   (002)
+y19 $dc $ff $01  $e8 $80 $C8 (001)
+
+y1 $dc $ff $13 $e8 $80 $C8 c<f+>cd+cd+f+d+f+>c<f+>cd+  c $e8 $70 $96 d+c<f+>c<f+d+f+d+cd+
+y19 $dc $ff $01  $e8 $80 $C8 d<a>df+df+af+a>c<a>cd  c $e8 $70 $96 dc<a>c<af+af+df+
+y1 $dc $ff $13 $e8 $80 $C8 d<a>df+df+af+a>d<a>df+  d $e8 $70 $96 f+d<a>d<af+af+df+<
+y19 $dc $ff $01  $e8 $80 $C8 bgb>d<b>dgdgbgb> d $e8 $70 $96 <b>dgdgbgb>d<b>d
+}
+
+#1
+
+@32 o2 y17
+r16 v180
+c+2 y4 >>>g2^8^16
+
+y9
+[ v180 $e8 $ef $50 [[c16]]8 $e8 $df $B4 [[c16]]8 v180 $e8 $ef $50 <[[b16]]8 $e8 $df $b4 [[b16]]8 ]8
+>
+v180 $e8 $ef $50 [[c16]]8 $e8 $df $B4 [[c16]]4
+
+$e8 $01 $C8
+
+v220
+[c4<b4r2]2
+>c4<b4>c4<a+4 $e8 $ff $00 b1..
+
+y10
+$e8 $01 $A0
+l32
+r16fv90 f v130 d v90f<v130 b>v90 d<v130 g+v90 bv130 gv90 g+v130 fv90 gv130 d v90f< v130b> v90d< v130g+v90 b v130g v90g+v130 fv90 g
+$f4 $03
+/
+;BASS
+@30 v230 o4
+[c2c2f+2f+2f2f2g2g2]2
+
+[ [[c8]]8 [[f+8]]8 [[f8]]8 [[g8]]8 ]3
+
+[g+8]8 [b8]8 [g8]8 > [c8]8 < [a8]8 [f+8]8 [d8]8 [g8]8
+
+
+#2
+
+y16
+@32 o2 v180
+r8
+g1^8
+
+y10
+;MAIN
+;Trumpet
+[r1]4
+@35 v225 o3 y9
+(200)[$de $30 $09 $37
+g+2f4c4d4f2 $e8 $60 $60 ^2
+v225 c4f4>c4<]g+2g2
+
+$df
+$f4 $03
+v10
+$E8 $FF $A0
+@70 o4
+[y11 c+32 y10 c+32 y9 c+32 y10 c+32]
+@69
+*
+@68
+*
+@67
+*
+@66
+*
+@65
+*
+@64
+*
+@63
+*
+@62
+$E8 $FF $DF
+*
+@61
+*
+@60
+*
+@59
+*
+@58
+*
+@57
+*
+@56
+*
+@55
+*
+
+$E8 $FF $80
+@54
+*
+@53
+*
+@52
+*
+$E8 $FF $50
+@51
+*
+@50
+*
+@49
+*
+@48
+*
+@47
+*
+
+
+@46
+*
+@45
+*
+@44
+*
+@43
+*
+@42
+*
+@41
+*
+@40
+*
+@39
+*
+
+$f4 $03
+
+@35 v225 o3
+(200) >d+2d2
+r2.
+
+y12 @30
+
+[f4g4<f4g4]2
+f4g4g+4f+4 $e8 $ff $00 g1..
+r2.
+v90 $E8 $FF $8C
+$df
+/
+;Strings
+@33 o4 y11
+[g1f+1f1g1]5
+
+>c1d1d1c1c1d1<a1b1
+
+#3
+
+y14
+@32 o3 v180
+r8.c+1^16
+
+@33 v130 o5 y11
+[f1g1g+1g1]4
+f2.
+v200
+f4g4<<< v250 f4g4 v200 >>> f4g4<<< v250 f4g4 v200 >>>f4g4g+4f+4 y10 v100 >g2^2 t37 $e8 $cf $20 ^2^4
+$e8 $01 $A0
+l32 $e3 $50 $2E
+r16fv90 f v130 d v90f<v130 b>v90 d<v130 g+v90 bv130 gv90 g+v130 fv90 gv130 d v90f< v130b> v90d< v130g+v90 b v130g v90g+v130 fv90 g
+v90 $E8 $FF $8C
+/
+;Strings
+@33 o4 y9
+[d+1d+1c1d1]5
+g+1b1b1g1a1a1f+1g1
+
+#4
+
+y12
+@32 o3 v180
+r4 g1
+
+@33 v140 o5 y9
+[c1d1f1d1]4
+c2. v200
+c4d4<<<< v250 f4g4>>>> v200 c4d4<<<< v250 f4g4>>>> v200 c4d4d+4c+4 y11 g2 $e8 $60 $00 ^2^4^8
+r1^8
+v90 $E8 $FF $8C
+/
+;Strings
+@33 o4 y10
+[c1c1<g+1b1]5 >
+d+1g1g1d+1f+1f+1d1d1
+
+#5
+
+y10
+@32 o4 v180
+r4^16 c+2...
+
+;PERCUSSIONS and sfx
+
+[@34 v210 o3 c2.
+v100 $e8 $30 $C0 [[c32]]8
+v210 c2..
+c16c16c1]5
+c4c4c8c16c16c8c16c16
+c2.
+
+[@31 c4c4
+@34 c4c4]2
+c4c4c4c4c1
+r1.
+/
+
+
+@72 v140 o4 y12
+(500)[c2c2f+2f+2f2f2g2g2]2
+
+
+@35 v200 o4 y11
+(501)[ $de $30 $09 $37 d+2c4<g4f+4>c2. $e8 $27 $60 ^4 v200 <g4>c4g4d+2d2]
+
+$df
+@72 v140 o4 y12
+(500)
+
+@35 v200 o4 y11
+(501)
+r4c4g4>c4<g+2g2 $e8 $27 $60 ^4
+v200 <g4>d4g4f2d+2 $e8 $27 $60 ^4
+v200 d+4d4c4d2<a2 $e8 $27 $60 ^4>
+v200 d4c4d4c2<b2
+
+#6
+
+y8
+@32 o4 v180
+r4. g2..
+
+
+[ $e5 $00 $00 $00 @36 v230 o4 f2.
+$e5 $00 $09 $30 @38 o2 v200 f4g2r2]8
+$e5 $00 $00 $00
+
+@36 v230 o4 f2.
+
+@33 v230 o5
+f4g4 r2 v230 f4g4 r2 v230 f4g4g+4f+4 $e8 $ff $00 d1..
+r2.
+$f4 $03
+/
+v10
+$E8 $FF $A0
+@70 o4
+[y12 c+32 y10 c+32 y8 c+32 y10 c+32]
+@69
+*
+@68
+*
+@67
+*
+@66
+*
+@65
+*
+@64
+*
+@63
+*
+@62
+$E8 $FF $DF
+*
+@61
+*
+@60
+*
+@59
+*
+@58
+*
+@57
+*
+@56
+*
+@55
+*
+
+$E8 $FF $80
+@54
+*
+@53
+*
+@52
+*
+$E8 $FF $50
+@51
+*
+@50
+*
+@49
+*
+@48
+*
+@47
+*
+
+
+@46
+*
+@45
+*
+@44
+*
+@43
+*
+@42
+*
+@41
+*
+@40
+*
+@39
+*
+
+$f4 $03
+$e5 $00 $09 $30
+[
+@74 o3 v190 y9
+$f4 $01 c8.  c4 $dd $00 $24 $a4 ^16>  c4 $dd $00 $1C $98 < c4 $f4 $01
+$f4 $01 f+8.  f+4 $dd $00 $24 $aa ^16>  f+4 $dd $00 $1C $9e < f+4 $f4 $01
+$f4 $01 f8.  f4 $dd $00 $24 $a9 ^16>  f4 $dd $00 $1C $9d < f4 $f4 $01
+$f4 $01 g8.  g4 $dd $00 $24 $ab ^16>  g4 $dd $00 $1C $9f < g4 $f4 $01
+
+@73 v200 o4
+ 
+v230 d+8 v170 d+8 v140 d+8 v130 d+8
+v230 c8 v170 c8 <
+v230 g8 v170 g8  
+v230 f+8 v170 f+8
+>
+v230 c8 v170 c8 v140 c8 v130 c8 v80 c8 v50 c8 
+ r4<  
+v230 g8 v170 g8
+> 
+v230 c8 v170 c8  
+v230 g8 v170 g8 
+v230 d+8 v170 d+8 v140 d+8 v130 d+8 
+v230 d8 v170 d8 v140 d8 v130 d8
+]2
+
+$f4 $03
+@75 v220 o5
+r1^4b8> @76 c8c+4d1
+^2 @75 <a8 @76 a+8b4>c1<
+^2 @75 f+8 @76 g8g+4 v255 a2^8^4 v220
+@75 g+8 @76 a8>c8d+4.d16c16d2
+
+#7
+
+y7
+@32 o5 v180
+r4..c2^4^16
+
+y10
+;MAIN
+;Trumpet
+[r1]4
+$de $30 $09 $37
+@35 v145 o3 r16 y12
+(700)[$de $30 $09 $40
+g+2f4c4d4f2 $e8 $60 $20 ^2
+v145 c4f4>c4<]g+2g2
+[r1]4
+(700) >d+2d2
+r2^8^16
+$df
+v255 o2 y10
+@37
+[a4a4r2]2 a4a4a4a4a1
+r1. /
+[y15 @36 v255 o4 c1^1^1^2 y8 @34 v210 o3 c4c4]7
