@@ -9,6 +9,8 @@
 ; XPosHi = $01, while the "Bottom" in horizontal levels corresponds to YPosHi = $01).    ;
 ;========================================================================================;
 
+incsrc "../../../shared/freeram.asm"
+
 !QuickKill          =   !false  ; false = when killed, a dead falling Reznor is spawned (vanilla behavior)
                                 ;  true = when killed, Reznor simply disappears. Use this if with the other
                                 ; option the game lags or you get dead floating Reznors.
@@ -112,13 +114,6 @@
 ; Edit them if you have some freeram conflict with another sprite/patch/whatever.      ;
 ;======================================================================================;
 
-!ReznorCounter      =   $7C         ; Always used. Must be an address which is reset on level load.
-!TotReznor          = $0DA1|!Base2  ; Always used.
-!EndTimerRam        = $13E6|!Base2  ; Always used.
-!FreeRam            = $0DD4|!Base2  ; Only used if !DivideSpeedBy is greater than $01.
-!FreeRam2           = $13C8|!Base2  ;\ Only used if !MinRadius is different from !MaxRadius.
-!RadiusRam          = $15E8|!Base2  ;|
-!RadiusTimer        = $0D9C|!Base2  ;/
 
 
 ;======================================================================================;
