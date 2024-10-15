@@ -276,8 +276,55 @@ CustExObjD7:
 		BNE -
 	LDA #$1F : STA [$6B],Y : LDA #$01 : STA [$6E],Y
 	RTS
+
 CustExObjD8:
+	;; clear spike trap
+	
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	STA $00
+	BIT #$01 : BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
+	LDA $00 : BIT #$02 : BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
+
+	LDA #$25 : STA [$6B],Y : LDA #$00 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$25 : STA [$6B],Y : LDA #$00 : STA [$6E],Y
+	RTS
+
 CustExObjD9:
+	; fire flower ? block rectangle
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	STA $00
+	BIT #$01 : BEQ +
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+		JSR ShiftObjRight
+	+
+	LDA $00 : BIT #$02 : BEQ +
+		JSR ShiftObjUp
+		JSR ShiftObjUp
+		JSR ShiftObjUp
+	+
+
+	LDA #$1F : STA [$6B],Y : LDA #$01 : STA [$6E],Y
+	RTS
+
 CustExObjDA:
 CustExObjDB:
 CustExObjDC:
