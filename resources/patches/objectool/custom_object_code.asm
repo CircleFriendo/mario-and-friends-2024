@@ -183,6 +183,7 @@ CustExObjD2:
 	RTS
 
 CustExObjD3:
+	;; raised spikes
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
@@ -200,6 +201,8 @@ CustExObjD3:
 	RTS 
 
 CustExObjD4:
+	;; fire flower ? block out of 8
+
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
@@ -216,6 +219,8 @@ CustExObjD4:
 	RTS
 
 CustExObjD5:
+	;; Mario bar
+
 	LDY $57
 	JSL $01ACF9|!BankB
     LDA $148D|!Base2
@@ -228,7 +233,49 @@ CustExObjD5:
 	+ RTS
 
 CustExObjD6:
+	;; Spiked gap
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03 : STA $00
+	-   BEQ +
+		JSR ShiftObjUp
+		DEC $00
+		BRA -
+	+
+	LDA #$B8 : STA [$6B],Y : LDA #$0F : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$B8 : STA [$6B],Y : LDA #$0F : STA [$6E],Y
+	JSR ShiftObjUp
+	
+	LDA #$04 : STA $01
+	LDA #$02 : STA $00
+	LDA #$25 : STA $02
+	LDA #$00 : STA $03
+	JSR Rectangle
+
+	LDA #$B9 : STA [$6B],Y : LDA #$0F : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$B9 : STA [$6B],Y : LDA #$0F : STA [$6E],Y
+
+
+	RTS
+
 CustExObjD7:
+	;; fire flower ? block out of 4
+	
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03 
+	INC : STA $00
+	-
+		JSR ShiftObjRight
+		DEC $00
+		BNE -
+	LDA #$1F : STA [$6B],Y : LDA #$01 : STA [$6E],Y
+	RTS
 CustExObjD8:
 CustExObjD9:
 CustExObjDA:
