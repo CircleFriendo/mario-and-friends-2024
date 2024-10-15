@@ -725,6 +725,9 @@ prepare_magic:
 ;#########################################################################
 
 sprinkle_magic:
+    lda #$00                       ;****************
+    sta !kamek_cutscene_mode
+
     jsr spawn_sparkles
     lda !sprite_timer,x
     bne .no_palette_cycling
