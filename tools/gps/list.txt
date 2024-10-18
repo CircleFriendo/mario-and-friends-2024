@@ -8,7 +8,7 @@
 
 ; Add your blocks here
 ; 400:130 example.asm
-
+0FD0:0130 PassonDcoins.asm
 
 ; BASEROM RESERVED BLOCKS BELOW -------------------------------------;
 ; The following blocks are largely on Pages 02 and 03 of Map16
@@ -26,6 +26,7 @@
 0213:0025 character/daisy.asm
 0214:0025 character/wario.asm
 0215:0025 character/waluigi.asm
+
 
 
 ; Custom Global Blocks
