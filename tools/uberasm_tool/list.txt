@@ -12,6 +12,9 @@ level:
 *   characters.asm
 E   preserverng.asm
 25  preserverng.asm, kamek_magic.asm
+27  preserverng.asm, kamek_magic.asm
+29  preserverng.asm, kamek_magic.asm
+2B  preserverng.asm, kamek_magic.asm
 
 ; Overworld resources
 overworld:
