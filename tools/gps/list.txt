@@ -9,6 +9,15 @@
 ; Add your blocks here
 ; 400:130 example.asm
 0FD0:0025 PassonDcoins.asm
+0241:0025 doors/door_screen1.asm
+0242:0025 doors/door_screen2.asm
+0243:0025 doors/door_screen3.asm
+0244:0025 doors/door_screen4.asm
+
+0251:0025 doors/door_screen1.asm
+0252:0025 doors/door_screen2.asm
+0253:0025 doors/door_screen3.asm
+0254:0025 doors/door_screen4.asm
 
 ; BASEROM RESERVED BLOCKS BELOW -------------------------------------;
 ; The following blocks are largely on Pages 02 and 03 of Map16
