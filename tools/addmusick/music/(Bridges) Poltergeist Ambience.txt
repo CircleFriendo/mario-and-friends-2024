@@ -1,0 +1,62 @@
+#amk 2
+
+#spc
+{
+    #title   "Poltergeist Ambience"
+    #game    "Radical Dreamers"
+    #author  "Yasunori Mitsuda"
+    #comment "Ported by KevinM"
+}
+
+#path "radical-dreamers"
+
+#samples
+{
+    #default
+    "Wind.brr"
+    "Sine-like Synth.brr"
+}
+
+#instruments
+{
+    "Wind.brr"            $ff $e0 $b8 $02 $47 ; @30
+    "Sine-like Synth.brr" $f2 $e0 $b8 $04 $00 ; @31
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w150       t65
+
+; Original volumes: w200
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $02 $28 $28
+$f1 $07 $32 $01
+$f5 $7e $00 $00 $00 $00 $00 $00 $00
+
+;==================;
+;      Macros      ;
+;==================;
+"I01 = @30"
+"I02 = @31"
+"_1  = =256"
+"_2  = =128"
+"_4  = =64"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0
+I01 v40 y10 o3 $e8$36$a4 /
+c_1^_4 $dd$00$7f>e ^_4^_4 $dd$00$7f<c ^_4 q7f ^=1
+c_4 $dd$00$ff<g+ ^_2^_4^_4 $dd$00$ff>c ^_2^_4 q7f ^=1
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+I02 v140 y10 o5 $fa$00$02 /
+[[c_4 $dd$00$ff<g+ ^_2^_4^_4 $dd$00$ff>c ^_2^_4 q7f $ed$7f$e0 ^=1]]2

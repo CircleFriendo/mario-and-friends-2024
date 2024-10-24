@@ -60,7 +60,10 @@ Locals:
 38	(Kamek 2) Anthem Of Greed.txt
 39	(Kamek 3) Super Mario Galaxy - Bowser's Galaxy Reactor.txt
 3A	(Kamek Boss) TheFangedFastener.txt
-3B	(Castles) VLDC8 - Castle 2.txt
+3B	(Kamek Castle) Waltz of the Magikoopa.txt
 3C	(Castle Bosses) VLDC8 - Boss.txt
 3D	(Main World) Ghost Valley (Lobby).txt
 3E	(Kamek World) bossblitz.txt
+3F	(Bridges) Poltergeist Ambience.txt
+40	(Rest Stops) River Ambience.txt
+41	(Postgame Level) VLDC9 - Night.txt
