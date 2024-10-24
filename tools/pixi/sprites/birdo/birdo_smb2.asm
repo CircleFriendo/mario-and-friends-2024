@@ -46,7 +46,7 @@ db $40,$40,$90		;amount of frames before spitting sprites
 
 ;Other defines
 !EndLevelOrb = 1	;if 1, boss will spawn an orb after being defeated.
-!Music = $0B		;song to play during level end.
+!Music = $03		;song to play during level end.
 !SpitOrbSFX = $10
 !SpitOrbPort = $1DF9
 
