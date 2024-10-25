@@ -380,6 +380,26 @@ CustExObjDC:
 
 
 CustExObjDD:
+;; rectangle (2x4)
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	STA $04
+	AND #$01
+	BEQ +
+		JSR ShiftObjUp : JSR ShiftObjUp : JSR ShiftObjUp
+		JSR ShiftObjUp : JSR ShiftObjUp : JSR ShiftObjUp	
+	+
+	
+	LDA #$02 : STA $00
+	LDA #$05 : STA $01
+	LDA #$00 : STA $02
+	LDA #$11 : STA $03
+	JSR Rectangle
+	RTS 
+
+
 CustExObjDE:
 CustExObjDF:
 CustExObjE0:
