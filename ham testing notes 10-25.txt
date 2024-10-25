@@ -1,0 +1,115 @@
+General
+
+Let's go ahead and patch out spin jump auto-fireballs
+Bonus Game still needs disabling
+Maybe some HUD tweaks since half the stuff in it doesn't matter
+Peach's cape still has that blue tile
+Need a proper intro screen without the default intro text
+It was mentioned we should go around and make the Peach color more distinct and consistent -- maybe other "character colors" should too?
+Title screen palette is missing the text colors, besides the title screen's other more pressing issue (dying)
+
+0-1
+Make sure every Pipe Lakitu has a disposal chute near it
+Maybe red pipes should be stark red and not pinkish like the grass / character colors shouldn't be influenced by lighting in general
+Block dispenser between the two fire Piranhas makes it too easy
+
+0-2
+Little bit of gray ground left near the 5th Dragon Coin
+No way to backtrack for that coin without getting hurt when you notice it
+Bit of pillar cutoff right at the end
+
+1-1
+Background structure and mushroom platforms use the same color outline, may want to use different palette
+Have to wrestle with the camera a bit to get a Bullet Bill to fire for the last Dragon Coin
+Slight cutoff when spikes are on top of launchers
+Could use more variety in sprites to demonstrate the stomp's interactions
+
+1-2
+Feels too short... or maybe I just wanted to hear more of the song
+Might want another visual pass (no "ruins" theming yet, and 3D space is a little confusing with non-semi solid ground appearing both in front of and behind the water)
+Inviting the player to stomp down into ? blocks implies they'd actually activate
+No real reason to follow the blue coins down while spinning/stomping
+Lot of empty water and open sky just off the beaten path implies secrets or allows skips
+Unsure how to explain to the player why Classic Goombas don't give a bounce when stomping like you'd expect
+
+1-3
+Same color for Layer 2 blocks and background may not be ideal
+Likely to get hit by a Ball and Chain in boss room before you notice it's there
+
+2-1
+This is my level I nitpick to death so not much to say here
+
+2-2
+Visual pass not yet finished (although it's probably fine)
+Last powerup is after anything could possibly hurt you
+
+2-3
+Some randomizations have jumps that are a little too much for Mario
+Some randomizations leave koopas stuck clipped into walls
+
+3-1
+Fix classic piranha vines still being fish
+I think we wanted to redesign the 2nd Dragon Coin area a bit upon learning climbable semisolids let you go down?
+Lot of free Dragon Coins in this one, even if the first one is intentional
+
+3-2
+Weird thing going on with Layer 3 priority here
+Not sure how I feel about wood-colored stone pillars or wood submerged in lava
+Question blocks at the end seem like they should be more of a bonus than a requirement
+
+3-3
+Game lags near some of the Hotheads
+Boss room Hothead is clever but it despawning may catch casual players off-guard, maybe use reskinned Spiny Blocks instead?
+Need a mixed ExGFX for the Hothead in the boss room if it stays
+
+4-1
+Lots of lag around the Goomba stacks
+Might want another visual pass (same comment re: 3D space, and feels overreliant on basic pillars)
+
+4-2
+First saw often despawns, should be placed all the way to the right
+Rhino Gate (TM) seems a little rough when combined with getting out of water
+Might want another visual pass (same comment re: 3D space, and orange water under a blue sky in a "lava" level would imply that it's unsafe)
+Cloud platforms seem like an opportunity to use semisolids more thematic to the hack like wood or mushrooms
+Free mushroom just for the last saw is a little odd
+It was mentioned we should change the shell ending to not have softlock potential
+
+4-3
+Sometimes Dolphins don't spawn behind you when you'd expect them to when you need to slow down in the generator section
+
+5-1
+Visual pass not quite finished
+Can sometimes miss out on getting the Mushroom after the checkpoint due to the Pokey
+
+5-2
+Getting hurt for not having the foresight to step on one of the timed platforms near the start might be a little frustrating
+Mostly just needs a visual pass to be consistent with 5-1
+
+5-3
+Make Wario/Waluigi/Boo room entrance pipes one-way so you don't lose progress
+Unsure what the blank Map16 next to the pipes in the Daisy room are
+Boo Boss is a good idea in theory but centered around Wario/Mario/Wario again in practice -- Luigi can't even get the middle one because it's a Turn Block
+Wario is pretty likely to faceplant into an Eerie while dashing
+Have to die and start over if you run out of powerups without uncovering all the throwblocks or waste any of them
+Green blocks look weird because of sharing an outline color with the background structures
+Need a castle destruction scene / etc after this explaining that Mario got taken away
+
+6-1
+Lakitu often leaves Spinies stuck in walls
+Pink outlines in the yellow palette resulting from the pink Munchers look odd
+
+6-2
+Could use a visual pass with more mushrooms etc
+Doesn't automatically walk you downward on the OW when finishing the level
+
+6-3
+As charming of an idea as it is for Waluigi to panic Boost Jump at the Bony Beetle before the checkpoint, he's kinda screwed without a cape
+
+6-4
+Obviously this needs a fancier lobby and a bit more visual polish
+I should add a checkpoint to the end of my room
+The last section of my room sucks for Peach if she touches the floor
+Kamek Boss doesn't play the correct victory music for some reason
+
+6-5
+Currently just an unfinished credits room with map music
