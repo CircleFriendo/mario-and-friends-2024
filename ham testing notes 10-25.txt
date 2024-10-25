@@ -5,11 +5,11 @@ Bonus Game still needs disabling
 Maybe some HUD tweaks since half the stuff in it doesn't matter
 Peach's cape still has that blue tile
 Need a proper intro screen without the default intro text
-
+It was mentioned we should go around and make the Peach color more distinct and consistent -- maybe other "character colors" should too?
 
 0-1
 Make sure every Pipe Lakitu has a disposal chute near it
-Blue tint added here isn't helping the Mario/Peach color confusion even if it is map accurate
+Maybe red pipes should be stark red and not pinkish like the grass / character colors shouldn't be influenced by lighting in general
 Block dispenser between the two fire Piranhas makes it too easy
 
 0-2
