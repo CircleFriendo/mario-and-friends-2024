@@ -1,0 +1,62 @@
+General
+
+Let's go ahead and patch out spin jump auto-fireballs
+Bonus Game still needs disabling
+Maybe some HUD tweaks since half the stuff in it doesn't matter
+
+0-1
+Make sure every Pipe Lakitu has a disposal chute near it
+Blue tint added here isn't helping the Mario/Peach color confusion even if it is map accurate
+Block dispenser between the two fire Piranhas makes it too easy
+
+0-2
+Little bit of gray ground left near the 5th Dragon Coin
+No way to backtrack for that coin without getting hurt when you notice it
+Bit of pillar cutoff right at the end
+
+1-1
+
+
+1-2
+Feels too short... or maybe I just wanted to hear more of the song
+Might want another visual pass (no "ruins" theming yet, and 3D space is a little confusing with non-semi solid ground appearing both in front of and behind the water)
+Inviting the player to stomp down into ? blocks implies they'd actually activate
+No real reason to follow the blue coins down while spinning/stomping
+Lot of empty water and open sky just off the intended path, implying nonexistent secrets / allowing some skips
+
+1-3
+
+2-1
+
+2-2
+
+2-3
+
+3-1
+Fix classic piranha vines still being fish
+I think we wanted to redesign the 2nd Dragon Coin area a bit upon learning climbable semisolids let you go down?
+Lot of free Dragon Coins in this one, even if the first one is intentional
+
+3-2
+Weird thing going on with Layer 3 priority here
+Not sure how I feel about wood-colored stone pillars or wood submerged in lava
+Question blocks at the end seem like they should be more of a bonus than a requirement
+
+3-3
+Game lags near some of the Hotheads
+Boss room Hothead is clever but it despawning may catch casual players off-guard, maybe use reskinned Spiny Blocks instead?
+Need a mixed ExGFX for the Hothead in the boss room if it stays
+
+4-1
+Lots of lag around the Goomba stacks
+Might want another visual pass (same comment re: 3D space, and feels overreliant on basic pillars)
+
+4-2
+First saw often despawns, should be placed all the way to the right
+Rhino Gate (TM) seems a little rough when combined with getting out of water
+Might want another visual pass (same comment re: 3D space, and orange water under a blue sky in a "lava" level would imply that it's unsafe)
+Cloud platforms seem like an opportunity to use semisolids more thematic to the hack like wood or mushrooms
+Free mushroom just for the last saw is a little odd
+It was mentioned we should change the shell ending to not have softlock potential
+
+4-3
