@@ -6,6 +6,7 @@ Maybe some HUD tweaks since half the stuff in it doesn't matter
 Peach's cape still has that blue tile
 Need a proper intro screen without the default intro text
 It was mentioned we should go around and make the Peach color more distinct and consistent -- maybe other "character colors" should too?
+Title screen palette is missing the text colors, besides the title screen's other more pressing issue (dying)
 
 0-1
 Make sure every Pipe Lakitu has a disposal chute near it
@@ -111,4 +112,4 @@ The last section of my room sucks for Peach if she touches the floor
 Kamek Boss doesn't play the correct victory music for some reason
 
 6-5
-Currently just an unfinished credits room
+Currently just an unfinished credits room with map music
