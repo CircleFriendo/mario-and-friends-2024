@@ -29,7 +29,7 @@ patches = [
 	
     "resources/patches/dragon_coin_save.asm",
 	
-	"resources/patches/fixes/asarspritetiles.asm"
+	"resources/patches/fixes/asarspritetiles.asm",
     "resources/patches/fixes/autoscroll_lr_fix.asm",
 	"resources/patches/fixes/ball_chain_yoshi_fix.asm",
 	"resources/patches/fixes/block_duplication_fix.asm",
