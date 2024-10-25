@@ -343,7 +343,42 @@ CustExObjDA:
 
 
 CustExObjDB:
+;; Rectangle (5x0, 5x1, 5x2, 5x3)
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$03
+	BEQ +
+		STA $01
+		LDA #$05 : STA $00
+		LDA #$00 : STA $02
+		LDA #$11 : STA $03
+		JSR Rectangle
+	+ RTS 
+
+
 CustExObjDC:
+;; semi-solid ledge (2x1, 2x2)
+
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	AND #$01
+	BEQ +
+		LDA #$57 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjRight
+		LDA #$58 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+		JSR ShiftObjUp
+	+
+	LDA #$59 : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$5A : STA [$6B],Y : LDA #$11 : STA [$6E],Y
+
+	RTS 
+
+
+
 CustExObjDD:
 CustExObjDE:
 CustExObjDF:

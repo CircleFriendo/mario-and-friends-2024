@@ -46,7 +46,7 @@ incsrc "../../../shared/freeram.asm"
                                 ; Note that high value of this will make the Reznors look "laggy".
 
 !CenterXPosLo       =   $80     ;\ X and Y position of the center of rotation.
-!CenterYPosLo       =   $40     ;| Note that the position in which they're placed in LM defines when they
+!CenterYPosLo       =   $10     ;| Note that the position in which they're placed in LM defines when they
 !CenterXPosHi       =   $00     ;| will spawn, and then they'll be placed at the position defined here.
 !CenterYPosHi       =   $00     ;/
 
