@@ -255,12 +255,12 @@ includeonce
 ; change these constants to whatever they are in list.txt
 ; For example, if you changed the "Stage Clear" music to be number 9,
 ; Then you'd change "!StageClear = $04" to "!StageClear = $09".
-!Starman	= $05
+!Starman	= $00
 !Miss		= $01			
 !GameOver	= $02			
 !BossClear	= $03			
 !StageClear	= $04			
-!PSwitch	= $06
+!PSwitch	= $00
 !Keyhole	= $07
 !IrisOut	= $08
 !BonusEnd	= $09
