@@ -194,8 +194,8 @@ CustExObjD3:
 	JSR Rectangle
 
 	LDA #$01 : STA $01
-	LDA #$59 : STA $02
-	LDA #$01 : STA $03
+	LDA #$B8 : STA $02
+	LDA #$0F : STA $03
 	JSR Rectangle
 	
 	RTS 
