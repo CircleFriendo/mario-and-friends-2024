@@ -88,5 +88,6 @@ patches = [
 	"resources/patches/FindPlatformSprite.asm",
 
 	"resources/patches/tweaks.asm",
-	"resources/patches/tweaks2.asm"
+	"resources/patches/tweaks2.asm",
+	"resources/patches/course_clear.asm"
 ]
