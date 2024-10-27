@@ -427,8 +427,8 @@ jump_speed_luigi_short:
 		db $D2,$00,$D0,$00,$D1,$00,$D0,$00
 
 jump_speed_waluigi:
-  		db $C9,$00,$C6,$00,$C3,$00,$C2,$00  ; waluigi physics
-		db $C0,$00,$BE,$00,$BC,$00,$BA,$00
+  		db $C5,$00,$C2,$00,$BF,$00,$BE,$00  ; waluigi physics
+		db $BC,$00,$BB,$00,$B8,$00,$B6,$00
 
 		
 neutral_decel_luigi:
