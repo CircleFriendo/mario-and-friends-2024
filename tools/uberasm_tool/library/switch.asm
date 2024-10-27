@@ -11,7 +11,7 @@ init:
     BRA -
     +++ TXA : STA !player : BRA +
     ++ LDA !characterflags : AND #!characterbits : BEQ +
-    LDA !player : TAX : AND Flags,X : BNE +
+    LDA !player : TAX : LDA !characterflags : AND Flags,X : BNE +
         JSL Forward
     + 
     LDA !player : STA !lastplayer
@@ -24,6 +24,7 @@ Main:
     STZ $1401|!addr			;disable L/R scrolling
 
     LDA !disableswitchflag : AND #!disableswitchbit : BNE Continue
+    LDA $13D4|!addr : BNE Continue
 
     CheckR:
 	LDA $18				;check if controller button is newly pressed..
