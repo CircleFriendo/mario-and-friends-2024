@@ -401,6 +401,27 @@ CustExObjDD:
 
 
 CustExObjDE:
+;; donuts
+	
+	LDY $57
+	JSL $01ACF9|!BankB
+    LDA $148D|!Base2
+	STA $01
+	AND #$01 : BEQ + 
+	INC : STA $00
+		JSR ShiftObjDown
+		JSR ShiftObjDown
+	+
+	LDA $01 : AND #$04 : BEQ +
+		JSR ShiftObjRight
+	+
+	LDA #$9D : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+	JSR ShiftObjRight
+	LDA #$9D : STA [$6B],Y : LDA #$02 : STA [$6E],Y
+	RTS
+
+
+
 CustExObjDF:
 CustExObjE0:
 CustExObjE1:
