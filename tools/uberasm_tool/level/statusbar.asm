@@ -5,7 +5,7 @@
 !StatusBarStars = $7e0f1B
 !StatusBarCoins = $7e0f10
 !StatusBarScore = $7e0f2f
-
+!StatusBarTimer = $7e0f25
 
 init:
     LDA #$FC
@@ -18,5 +18,8 @@ init:
     STA !StatusBarStars+1
     STA !StatusBarStars+4
     STA !StatusBarScore
-
+    STA !StatusBarTimer
+    STA !StatusBarTimer+1
+    STA !StatusBarTimer+2
+    
     RTL

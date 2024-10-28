@@ -1,4 +1,13 @@
 
+; move timer
+org $008E6F
+    LDA $0F31
+    STA $0F0A
+    LDA $0F32
+    STA $0F0B
+    LDA $0F33
+    STA $0F0C
+
 
 ; skip score
 org $008EC6
