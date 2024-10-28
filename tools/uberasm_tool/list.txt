@@ -18,6 +18,7 @@ E   preserverng.asm
 
 ; Overworld resources
 overworld:
+5   nomario.asm
 
 ; Game mode resources
 gamemode:
