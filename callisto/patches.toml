@@ -89,5 +89,6 @@ patches = [
 
 	"resources/patches/tweaks.asm",
 	"resources/patches/tweaks2.asm",
-	"resources/patches/course_clear.asm"
+	"resources/patches/course_clear.asm",
+	"resources/patches/statusbar.asm"
 ]
