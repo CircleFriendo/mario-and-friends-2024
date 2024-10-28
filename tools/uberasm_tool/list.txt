@@ -9,7 +9,7 @@ rom: smw.smc
 
 ; Level resources
 level:
-*   characters.asm
+*   characters.asm, statusbar.asm
 E   preserverng.asm
 25  preserverng.asm, kamek_magic.asm
 27  preserverng.asm, kamek_magic.asm
