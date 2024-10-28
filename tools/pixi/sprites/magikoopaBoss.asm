@@ -4,9 +4,9 @@
 ; If extra bit set - secret exit upon defeat, otherwise normal exit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-!HP = 6				; should be pretty obvious
+!HP = 5				; should be pretty obvious
 
-!Music = $0B	     		; Music that plays after defeating boss.
+!Music = $03	     		; Music that plays after defeating boss.
 
 !MagicNumber = $20              ; The vanilla sprite to generate (Magikoopa magic).
 !WandTile = $99                 ; The sprite tile to use for the wand.
