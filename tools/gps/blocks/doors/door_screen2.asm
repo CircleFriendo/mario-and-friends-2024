@@ -1,7 +1,7 @@
 ;Behaves #$025
 ;A door that uses a specific screen exit.
 
-!screen_num = $02	;>screen number this block uses.
+!screen_num = $00	;>screen number this block uses.
 
 !small_door = 0		;>0 = allow all forms, 1 = small only.
 
