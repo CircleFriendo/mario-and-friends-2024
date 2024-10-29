@@ -28,7 +28,9 @@ displaycoins:
 
 ; skip bonus stars and name
 org $008F86
+    JSR $9079
     BRA dragoncoins
+
 
 org $008FD8
 dragoncoins:
