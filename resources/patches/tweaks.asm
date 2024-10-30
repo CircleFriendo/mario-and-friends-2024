@@ -130,6 +130,12 @@ org $03C511 : db $0C
 ;; GFX Tweaks & Fixes ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
+; move megamole tile to make room for lava splashes
+org $038837 : db $E4
+
+; move dino-torch tile to make room for lava splashes
+org $039E24 : db $A6
+
 ; make fire-spitting piranha plants Yellow
 org $07F44E : db %00000100
 
