@@ -11,8 +11,8 @@
 
 ; Camera X position for each event ($FFFF = don't scroll).
 x_pos:
-    dw $FFFF,$FFFF,$FFFF,$FFFF,$40,$FFFF,$FFFF,$60 ; 00-07
-    dw $FFFF,$FFFF,$FFFF,$88,$FFFF,$FFFF,$88,$FFFF ; 08-0F
+    dw $FFFF,$FFFF,$FFFF,$FFFF,$0068,$FFFF,$FFFF,$0098 ; 00-07
+    dw $FFFF,$FFFF,$FFFF,$00E0,$FFFF,$FFFF,$0110,$FFFF ; 08-0F
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 10-17
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 18-1F
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 20-27
@@ -29,8 +29,8 @@ x_pos:
 
 ; Camera Y position for each event ($FFFF = don't scroll).
 y_pos:
-    dw $FFFF,$FFFF,$FFFF,$FFFF,$48,$FFFF,$FFFF,$50 ; 00-07
-    dw $FFFF,$FFFF,$FFFF,$58,$FFFF,$FFFF,$50,$FFFF ; 08-0F
+    dw $FFFF,$FFFF,$FFFF,$FFFF,$0080,$FFFF,$FFFF,$0070 ; 00-07
+    dw $FFFF,$FFFF,$FFFF,$0080,$FFFF,$FFFF,$0080,$FFFF ; 08-0F
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 10-17
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 18-1F
     dw $FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF,$FFFF ; 20-27
