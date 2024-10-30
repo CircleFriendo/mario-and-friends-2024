@@ -1,0 +1,97 @@
+#amk 2
+#path "beggingready"
+#samples
+{
+#default
+"square.brr"
+"harp.brr"
+"glockenspiel.brr"
+}
+#instruments
+{
+"square.brr"       $fd$6a$00$0a$00 ;square
+"harp.brr"         $af$2f$00$07$30 ;harp
+"glockenspiel.brr" $ae$2f$00$03$00 ;glocken
+}
+
+;MIDI by nino94, port by nino94.
+
+$ef$ff$12$12
+$f1$05$52$00
+
+#0 t45 @30 o4 y0 v190 $f4$02 w140
+r8 (0)[f+16r16f+16r8.]g16r2
+r16
+(0)e16r2
+r16
+(0)g16r8.b16r16a16r8.
+g16r8.f+16r8.e4.
+r8(0)g16r2
+r16
+(0)e16r2
+r16
+d16r16d16r8.e16r8.e16r16f+2^8r2
+
+#1 @30 v195 y10 
+r8o4
+(1)[d16r16d16r8.]d16r2
+r16
+(1)c16r2
+r16
+(1)d16r8.f+16r16f+16r8.
+d16r8.d16r8.c4.
+r8o4
+(1)d16r2
+r16
+(1)c16r2
+r16
+<a+16r16a+16r8.>c16r8.c16r16d2^8r2
+
+#2 @30 v190 y20
+r8o3
+(2)[a16r16a16r8.]b16r2
+r16
+(2)g16r2
+r16
+(2)b16r8.>d16r16d16r8.
+<b16r8.a16r8.g4.
+r8 (2)b16r2
+r16
+(2)g16r2
+r16
+f16r16f16r8.g16r8.g16r16a2^8r2
+
+#3 @31 y12 v255 o3
+[d16r4r16d16r2
+r16]3
+d16r4r16d16r4..<a16r16
+>d16r4r16d16r2r16
+d16r4r16d16r2r16
+d16r4r16d16r16e16r4r16f+16r16r1r1
+
+#4 @32 y10 v255 $fa$03$54 o4
+r2.(3)[f+4
+a4r2b4
+a4r1
+r1
+r2
+f+4
+a4r4.b4>c8
+d2e4.f+1]
+
+#5 @30 o4 v145 y20 $ee$32
+r8 (0)g16r2
+r16
+(0)e16r2
+r16
+(0)g16r8.b16r16a16r8.
+g16r8.f+16r8.e4.
+r8(0)g16r2
+r16
+(0)e16r2
+r16
+d16r16d16r8.e16r8.e16r16f+2^8r2
+
+#6 @32 o4 v142 y5 $ee$32
+r8 r2.(3)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

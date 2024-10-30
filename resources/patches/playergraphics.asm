@@ -586,18 +586,18 @@ LuigiOWPalette:
 
 
 PeachPalette:                      
-    dw $635F, $45DF, $000A, $349E, $00CA, $05D7, $0EDF, $2455, $35DF, $54E3
+    dw $635F, $45DF, $000A, $349E, $00CA, $05D7, $0EDF, $2455, $35DF, $45DF
 PeachFirePalette:
-    dw $635F, $739D, $110B, $52DC, $00AA, $0197, $027F, $41DF, $0DDF, $54E3
+    dw $635F, $739D, $110B, $52DC, $00AA, $0197, $027F, $41DF, $0DDF, $739D
 PeachOWPalette:
     dw $0000, $7fff, $0000, $0016, $001F, $6D08, $2DDD, $635F
     dw $2416, $349E, $01D7, $02DF, $0000, $0000, $0000, $0000
 
 
 DaisyPalette:
-    dw $575F, $029F, $14CF, $0118, $0886, $15DF, $2DDF, $1D55, $22E0, $3E34
+    dw $575F, $029F, $14CF, $0118, $0886, $15DF, $2DDF, $1D55, $22E0, $7fff
 DaisyFirePalette:
-    dw $575F, $2DFC, $1111, $0007, $042B, $0017, $2DDF, $427B, $5D61, $3E34
+    dw $575F, $2DFC, $1111, $0007, $042B, $0017, $2DDF, $427B, $5D61, $7fff
 DaisyOWPalette:
     dw $0000, $7fff, $0000, $15DF, $1199, $22E0, $14CF, $575F
     dw $10CA, $0000, $0000, $0000, $0000, $0000, $0000, $0000
