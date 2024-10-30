@@ -274,9 +274,9 @@ includeonce
 !Castle		= $11
 !SwitchPalace	= $12
 !CastleDestructionFanfare = $13
-!Welcome	= $13
+!Welcome	= $42
 !RescueEgg	= $14
-!Title		= $15
+!Title		= $42
 !VoBAppears	= $16
 !Overworld	= $17
 !YoshisIsland	= $18

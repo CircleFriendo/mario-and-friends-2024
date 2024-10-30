@@ -66,4 +66,6 @@ Locals:
 3E	(Kamek World) bossblitz.txt
 3F	(Bridges) Poltergeist Ambience.txt
 40	(Rest Stops) River Ambience.txt
-41	(Postgame Level) VLDC9 - Night.txt
+41	Smpkamek.txt
+42	Super Mario 3D World - Lava Rock Lair.txt
+43	Getting Ready.txt

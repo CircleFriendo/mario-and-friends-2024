@@ -1,0 +1,252 @@
+; **************************************************************
+; Super Mario 3D World - Lava Rock Lair
+; ported by imamelia
+;
+; This is the lava/castle level theme from Super Mario 3D World,
+; found in 4-Castle, 5-3, 5-Castle, 7-1, and others.
+;
+; Insert size: 0x784 bytes
+; Number of channels: 8
+; Total song length: 1:14
+; Loop length: 1:14
+; **************************************************************
+
+#SPC
+{
+	#author		"?"
+	#game		"Super Mario 3D World"
+	#comment	"Lava level theme (and castle)"
+	#title		"Lava Rock Lair"
+}
+
+w230 t60
+
+; **************************************************************
+; Instrument/sample info:
+; **************************************************************
+;
+; @30 (sample 00) - flute
+; @31 (sample 01) - strings
+; @32 (sample 0D) - harpsichord
+; @33 (sample 04) - synth bass
+; @34 (sample 0F) - kick
+; @35 (sample 0B) - snare 1
+; @36 (sample 0E) - snare 2
+; @37 (sample 0E) - snare 3
+; @38 (sample 10) - timpani
+; @39 (sample 0E) - clank
+;
+; **************************************************************
+
+; **************************************************************
+; Channel info:
+; **************************************************************
+;
+; 0 - drums
+; 1 - synth bass
+; 2 - pan flute/harpsichord 1
+; 3 - strings 1/harpsichord 2
+; 4 - strings 2
+; 5 - background strings 1
+; 6 - background strings 2
+; 7 - echo/timpani/clank
+;
+; **************************************************************
+
+#samples
+{
+	#default
+}
+
+#instruments
+{
+	@0 $88 $E4 $00 $06 $00
+	@1 $99 $E9 $00 $03 $00
+	@14 $ED $D1 $00 $07 $00
+	@4 $8B $4F $00 $03 $00
+	@21 $FF $E0 $00 $03 $00
+	@10 $FF $E0 $00 $03 $00
+	@29 $FD $E3 $00 $03 $00
+	@29 $FD $E3 $00 $02 $80
+	@12 $EE $F0 $00 $03 $00
+	@25 $FF $EE $00 $03 $00
+}
+
+#0	@34	q79 v220 y10
+#1	@33	q79 v170 y10
+#2	@30	q79 v240 y10
+#3	@31	q79 v230 y10
+#4	@31	q79 v230 y10
+#5	@31	q79 v220 y10
+#6	@31	q79 v220 y10
+#7	@32	q79 v200 y10
+
+"Kick = @34 q7C"
+"Snare1 = @35 q7A"
+"Snare2 = @36 q79"
+"Snare3 = @37 q79"
+
+; **************************************************************
+
+#0 o4 l8
+
+$EF $FA $19 $19
+$F1 $07 $5A $00
+$F5 $7F $00 $00 $00 $00 $00 $00 $00
+
+r4
+/
+[Kick c4 Snare1 c8 Kick c4c8 Snare2 c4 Kick c8c8 Snare1 c8 Kick c4c8 Snare3 c4]12
+[Kick c4 Snare1 c8 Kick c8r4 Snare2 c4 Kick r8c8 Snare1 c8 Kick r4c8 Snare3 c4
+Kick c4 Snare1 c8 Kick c8r4 Snare2 c4 Kick r8c8 Snare1 c8 Kick r4c8 Snare3 c8 Kick c8]3
+(1)[Kick c4 Snare1 c8 Kick c8r4 Snare2 c4 Kick r8c8 Snare1 c8 Kick] r4c8 Snare3 c4
+(1) c8 Snare1 c8 Kick c8 Snare1c8c8
+(2)[Snare1 c8 Kick c4 Snare1 c8 Kick c4 Snare1 c8 Kick c4c8 Snare2 c4]r8 Kick c8c8c8
+(2) Kickc16c16c16c16 Snare3 c8c8
+
+; **************************************************************
+
+#1 o2 l8 $DE $01 $06 $1A
+
+r4
+/
+[er4er2edrer4<b>d e<erer2eerer2]6
+(10)[fr4fr>f<fr=120f>fc<a
+fr4fr>f<fr=120f>fc<g+]
+(11)[er4er>e<er=120e>e<bg+]2
+(10)(11) er4er>e<er [r2]10
+
+; **************************************************************
+
+#2 o3 l8 $DE $18 $0C $2A ;$E5 $18 $A8 $18
+
+@38 o2 b16b16b16b16> $F4 $03
+/
+@38 e4 $F4 $03 @30 $DE $18 $0C $2A [r4]31
+b2.>c+4d1r4<g+=90>e32f+4
+e4d=42<a32b4a4
+b2.>c+4d1
+(20)[@32 $DF o5 rg+f+32g32f+16e<b>c+d4<g+abf+4r4.]
+@30 $DE $18 $0C $2A o3
+b2.>c+4d1r4<g+2>f+4g+4e=42<a32b4>c+4
+d4e8d4e8b4^1 (20)
+(21)[@31 q59 $F4 $03 $DE $18 $0C $18]
+>rgr4fr4er4dr=120<
+(22)[@32 q79 $F4 $03 $DF]
+(23)[c.c.d<a4b4>c]<faba4g+4>
+(21)
+>rg+r4f+r4er4dr<
+(22)
+ef+bf+g+4[r8]15
+(21)
+>dr4er4gr4ar=120<
+(22)
+(23)dc>c<beg+4
+(21)
+>rg+r4f+r4er4dr<
+(22)
+ef+bf+g+4r4.
+@30 $DE $18 $0C $2A <b>e<b=21b=3>d1
+@31 q59 $F4 $03 $DE $18 $0C $18
+>(24)[g<d+r>g<d+r>g<d+r4>]c+2.
+(24)b2.
+
+; **************************************************************
+
+#3 o4 l8 $DE $18 $0C $18
+
+r4
+/
+[r2]8
+[q79dq72drq79dq72dr4.q79c+c+q72c+<q79bq72br4.>]10
+q59 rar4gr4ar4er=120<
+(22)
+(30)[f.f.gd4e4f]fded4d4
+(21)
+>>rdr4c+r4<f+r4f+r<
+(22)
+g+a>d<ab4[r8]15
+(21)
+>gr4ar4ar4br=120<
+(22)
+(30)gf>fe<b>e4
+(21)
+>rdr4c+r4<f+r4f+r
+(22)
+<g+a>d<ab4r4.
+e32g+32b32>d32e<bf+4r>
+(21)
+g+b>def+
+(31)[d+<<br>>d+<<br>>d+<<br4>]d+2.>
+(31)f2.
+
+; **************************************************************
+
+#4 o3 l8 $DE $18 $0C $18
+
+r4
+/
+[r2]8
+[q79bq72brq79bq72br4.q79aaq72aq79aq72ar4.q79]10
+>(40)[d1..e4f2.e4d1]
+d1.e4f+4g+1^1
+(40)
+d1.e4f+4g+1^4.r=120
+[ar4ar4ar4.b2.]2
+
+
+; **************************************************************
+
+#5 o3 l8 $DE $18 $0C $18
+
+r4
+/
+[er4er2edrer4<b>d er4er2berer4<b>d]6
+(50)[f1..g4a2.g4]a1
+(51)[g+1.g+4g+4e2d2]<b2g+2>
+(50)f1
+(51)f+2
+[r4]7 f+2.
+[r4]5 f2.
+
+; **************************************************************
+
+#6 o2 l8 $DE $18 $0C $18
+
+r4
+/
+[er4er2edrer4<b>d er4er2berer4<b>d]6
+>>rcr4cr4cr4cr=120<
+c2.<b4>c1
+(60)[rbr4br4br4br=120]
+b1r2g+2
+>rcr4cr4dr4er4.<b4>
+c2.<b4a1
+(60)
+b1b1 <
+[ [[r4]]5 b2.]2
+
+; **************************************************************
+
+#7 o2 l8 $DE $06 $0E $18
+
+r4
+/
+@38 q7C o2 e1 @39 q79 r=120 c4. r1^1
+[r1 r=120 c4. r1^1]2 r1 r=120 c4.
+(70)[@32 o5 q78 r.g+f+32g32f+16e<b>c+d4<g+abf+4 @39 o3 q79] r=60
+o2 [r1 r=120 c4.]3 (70) r8. @38 q7C o2 b32b32b32b32>
+f4 r1. c4
+(71)[@32 o4 q78 r16c.c.d<a4b4>c<faba16 @38 q7C o3 a>c<e]
+(72)[ [[r16]]25 @32 o4 q78 ef+bf+g+4]
+[r16]25 @38 o3 q7C c32c32c32c32f4 r1^2 c4
+(71)
+(72)
+[r16]21 @38 o3 q7C bg+e
+(73)[d+>d+4<d+>d+4<d+>d+4<rb4]r2
+(73)r4bb
+
+; **************************************************************
+
+
+#amk 2
