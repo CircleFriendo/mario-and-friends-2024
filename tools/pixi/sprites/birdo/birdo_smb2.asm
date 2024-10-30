@@ -45,7 +45,7 @@ db $40,$40,$90		;amount of frames before spitting sprites
 !HurtPort = $1DFC
 
 ;Other defines
-!EndLevelOrb = 1	;if 1, boss will spawn an orb after being defeated.
+!EndLevelOrb = 0	;if 1, boss will spawn an orb after being defeated.
 !Music = $03		;song to play during level end.
 !SpitOrbSFX = $10
 !SpitOrbPort = $1DF9
@@ -380,8 +380,19 @@ HandleBirdoHit:
 	STA !B6,x
 
 	LDA #$03
-        STA !1602,x             ;write frame to show
+    STA !1602,x             ;write frame to show
 
+	;STZ $72		    ;clear player is in the air flag. freezes him in level end.
+
+	LDA #$FF                ; \ set normal exit
+	STA $1493|!Base2        ; /
+	STA $0DDA|!Base2        ; set music
+
+	DEC $13C6|!Base2	    ;prevent player from doing the level end march.
+
+	LDA #!Music             ; \ music to play during level end
+	STA $1DFB|!Base2        ; /
+	RTS
 if !EndLevelOrb
 SpawnOrb:
 		LDA !1528,x
@@ -422,7 +433,7 @@ GetXYOffsets:
 		LDA X_OFFSET,y
 		STA $00
 
-		LDA #$F2
+		LDA #$F6
 		STA $01
 		RTS
 

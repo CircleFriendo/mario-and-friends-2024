@@ -87,10 +87,12 @@ patches = [
 
 	"resources/patches/FindPlatformSprite.asm",
 
+	# "tools/event_camera_scroll.asm",
+
 	"resources/patches/tweaks.asm",
 	"resources/patches/tweaks2.asm",
 	"resources/patches/course_clear.asm",
-	"resources/patches/statusbar.asm",
+	"resources/patches/statusbar.asm"
 
-	"tools/event_camera_scroll.asm"
+	
 ]
