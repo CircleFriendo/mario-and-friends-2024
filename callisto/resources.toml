@@ -18,7 +18,7 @@ global_exanimation = "resources/global_exanimation.bps"
 # if you're using custom title screen movement
 # (You also need to edit the build order for this to 
 # have any effect!)
-# titlescreen_movement = "resources/titlescreen_movement.zst"
+titlescreen_movement = "resources/titlescreen_movement.zst"
 
 # If you want to keep your (Ex)GFX next to your ROM like 
 # usual, you can just comment out these two lines

@@ -13,7 +13,7 @@ build_order = [
     "ExGraphics",               # Insert ExGFX
     "Map16",                    # Insert Map16
 
-	# "TitleScreenMovement",      # Uncomment this if you're inserting title moves
+	"TitleScreenMovement",      # Uncomment this if you're inserting title moves
 
     "SharedPalettes",           # Insert Shared Palettes 
     "Overworld",                # Insert Overworld
