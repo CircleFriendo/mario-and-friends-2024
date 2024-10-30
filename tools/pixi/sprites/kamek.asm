@@ -357,6 +357,8 @@ detect_player:
     sta !sprite_timer,x
     lda !sprite_direction,x
     sta !sprite_direction_bak,x
+    lda #$01
+    sta !magic_nmi_codes
     bra .go_off_screen
 
     ;# If Kamek has to show a message (already shown or YI's behavior
@@ -843,8 +845,7 @@ init_off_screen:
     sta !sprite_state,x
     lda !sprite_direction_bak,x
     sta !sprite_direction,x
-    lda #$01
-    sta !magic_nmi_codes
+    
 .not_done
     rts 
 
